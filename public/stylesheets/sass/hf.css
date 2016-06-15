@@ -1,0 +1,23 @@
+/* line 1, ../../sass/sass/hf.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 4, ../../sass/sass/hf.scss */
+body {
+  width: 100%;
+  min-height: 100%;
+  background: #fef6eb;
+  font-family: "Malgun Gothic", Helvetica, Arial;
+}
+
+/* line 10, ../../sass/sass/hf.scss */
+.page960 {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* line 14, ../../sass/sass/hf.scss */
+.push {
+  height: 100px;
+}

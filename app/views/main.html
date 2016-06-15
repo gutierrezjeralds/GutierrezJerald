@@ -4,13 +4,57 @@
     <head>
         <title>#{get 'title' /}</title>
         <meta charset="${_response_encoding}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
-        #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-        <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/hf.css">
+        <link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/screen.css">
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap-select.css">
+        #{get 'moreStyles' /}
+
+        <script type="text/javascript" src="/public/javascripts/angular.min.js"></script>
+        <script type="text/javascript" src="/public/javascripts/jquery-1.10.2.min.js"></script>
+        <script src="/public/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/public/bootstrap/js/bootstrap-select.js"></script>
         #{get 'moreScripts' /}
     </head>
     <body>
-        #{doLayout /}
+        <div ng-controller="mainCtrl">
+            <div class="wrapper">
+                <header>
+                    <nav class="navbar navbar-default" id="navigation" role="navigation">
+                        <div class="container">
+                            <section class="header col-md-12 col-xs-12">
+                                <div class="navbar-header col-md-6">
+                                    <a href="" class="navbar-band">
+                                        <!--<img class="imgLogo" src="/public/images/nameTag.png" />-->
+                                    </a>
+                                    <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="glyphicon glyphicon-align-justify"></span>
+                                    </button>
+                                </div>
+                                <div class="collapse navbar-collapse navbar-left col-md-6" id="navbar-collapse">
+                                    <ul class="list-inline nav navbar-nav">
+                                        <li><a href="">HOME</a></li>
+                                        <li><a href="">RESUME</a></li>
+                                        <li><a href="">PORTFOLIO</a></li>
+                                        <li><a href="">CONTACT</a></li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </nav>
+                </header>
+
+                <div class="container">
+                    #{doLayout /}
+                </div>
+
+                <footer>
+
+                </footer>
+            </div>
+        </div>
     </body>
 </html>

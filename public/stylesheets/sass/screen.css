@@ -1,0 +1,424 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-0 {
+  width: 0%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-1 {
+  width: 8.33333%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-2 {
+  width: 16.66667%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-3 {
+  width: 25%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-4 {
+  width: 33.33333%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-5 {
+  width: 41.66667%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-6 {
+  width: 50%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-7 {
+  width: 58.33333%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-8 {
+  width: 66.66667%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-9 {
+  width: 75%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-10 {
+  width: 83.33333%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-11 {
+  width: 91.66667%;
+}
+
+/* line 3, ../../sass/sass/_grid.scss */
+.col-12 {
+  width: 100%;
+}
+
+@media screen and (min-width: 980px) {
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-0 {
+    width: 0%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-1 {
+    width: 8.33333%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-2 {
+    width: 16.66667%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-3 {
+    width: 25%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-4 {
+    width: 33.33333%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-5 {
+    width: 41.66667%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-6 {
+    width: 50%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-7 {
+    width: 58.33333%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-8 {
+    width: 66.66667%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-9 {
+    width: 75%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-10 {
+    width: 83.33333%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-11 {
+    width: 91.66667%;
+  }
+
+  /* line 9, ../../sass/sass/_grid.scss */
+  .lg-col-12 {
+    width: 100%;
+  }
+
+  /* line 13, ../../sass/sass/_grid.scss */
+  .lg-hide {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-0 {
+    width: 0%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-1 {
+    width: 8.33333%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-2 {
+    width: 16.66667%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-3 {
+    width: 25%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-4 {
+    width: 33.33333%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-5 {
+    width: 41.66667%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-6 {
+    width: 50%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-7 {
+    width: 58.33333%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-8 {
+    width: 66.66667%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-9 {
+    width: 75%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-10 {
+    width: 83.33333%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-11 {
+    width: 91.66667%;
+  }
+
+  /* line 20, ../../sass/sass/_grid.scss */
+  .md-col-12 {
+    width: 100%;
+  }
+
+  /* line 24, ../../sass/sass/_grid.scss */
+  .md-hide {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-0 {
+    width: 0%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-1 {
+    width: 8.33333%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-2 {
+    width: 16.66667%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-3 {
+    width: 25%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-4 {
+    width: 33.33333%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-5 {
+    width: 41.66667%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-6 {
+    width: 50%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-7 {
+    width: 58.33333%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-8 {
+    width: 66.66667%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-9 {
+    width: 75%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-10 {
+    width: 83.33333%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-11 {
+    width: 91.66667%;
+  }
+
+  /* line 31, ../../sass/sass/_grid.scss */
+  .sm-col-12 {
+    width: 100%;
+  }
+
+  /* line 35, ../../sass/sass/_grid.scss */
+  .sm-hide {
+    display: none;
+  }
+
+  /* line 38, ../../sass/sass/_grid.scss */
+  .imgLogo {
+    margin-top: 5px;
+    width: 200px;
+  }
+}
+@media screen and (max-device-width: 480px) {
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-0 {
+    width: 0%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-1 {
+    width: 8.33333%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-2 {
+    width: 16.66667%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-3 {
+    width: 25%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-4 {
+    width: 33.33333%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-5 {
+    width: 41.66667%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-6 {
+    width: 50%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-7 {
+    width: 58.33333%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-8 {
+    width: 66.66667%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-9 {
+    width: 75%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-10 {
+    width: 83.33333%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-11 {
+    width: 91.66667%;
+  }
+
+  /* line 46, ../../sass/sass/_grid.scss */
+  .mb-col-12 {
+    width: 100%;
+  }
+
+  /* line 50, ../../sass/sass/_grid.scss */
+  .mb-hide {
+    display: none;
+  }
+}

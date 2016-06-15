@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+}
+body {
+    width: 100%;
+    min-height: 100%;
+    background: #fef6eb;
+    font-family: "Malgun Gothic", Helvetica, Arial;
+}
+.page960 {
+    width: 960px;
+    margin: 0 auto;
+}
+.push{
+    height: 100px;
+}
