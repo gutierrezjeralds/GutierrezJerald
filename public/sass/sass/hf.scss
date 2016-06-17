@@ -20,3 +20,19 @@ body {
 .clear{
     clear: both;
 }
+.navbar{
+    background-image: url("../img/indexbackground.svg");
+    margin: 0;
+    border: none;
+    padding: 15px;
+}
+.navbar-header a{
+    height: 5em;
+}
+.navbar-header a img{
+    max-height: 100%;
+}
+.navbar-toggle{
+    top: 0px;
+    margin: 0 auto;
+}
