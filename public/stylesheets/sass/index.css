@@ -1,25 +1,26 @@
 /* line 4, ../../sass/sass/index.scss */
 .wrapper-index .row .profileImage img {
   vertical-align: middle;
-  margin-top: 30px;
+  margin-top: 50px;
+  max-height: 300px;
 }
-/* line 10, ../../sass/sass/index.scss */
+/* line 12, ../../sass/sass/index.scss */
 .wrapper-index .row .profileInfo .infoList {
   margin-top: 30px;
 }
-/* line 12, ../../sass/sass/index.scss */
+/* line 14, ../../sass/sass/index.scss */
 .wrapper-index .row .profileInfo .infoList li {
   display: inline-block;
   border: none;
 }
-/* line 15, ../../sass/sass/index.scss */
+/* line 17, ../../sass/sass/index.scss */
 .wrapper-index .row .profileInfo .infoList li .infoCircle {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   border: 1px solid;
 }
-/* line 20, ../../sass/sass/index.scss */
+/* line 22, ../../sass/sass/index.scss */
 .wrapper-index .row .profileInfo .infoList li .infoCircle p {
   line-height: 8;
   text-align: center;

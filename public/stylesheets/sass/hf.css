@@ -18,6 +18,26 @@ body {
 }
 
 /* line 14, ../../sass/sass/hf.scss */
-.push {
+.push50 {
+  height: 50px;
+}
+
+/* line 17, ../../sass/sass/hf.scss */
+.push100 {
   height: 100px;
+}
+
+/* line 20, ../../sass/sass/hf.scss */
+.clear {
+  clear: both;
+}
+
+/* line 23, ../../sass/sass/hf.scss */
+header {
+  max-height: 75px;
+}
+
+/* line 26, ../../sass/sass/hf.scss */
+.navbar-nav > li > a {
+  padding: 25px;
 }

@@ -13,14 +13,68 @@
         <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap-select.css">
         #{get 'moreStyles' /}
 
-        <script type="text/javascript" src="/public/javascripts/angular.min.js"></script>
+        <script type="text/javascript" src="/public/javascripts/angular/1.3.15/angular.min.js"></script>
         <script type="text/javascript" src="/public/javascripts/jquery-1.10.2.min.js"></script>
         <script src="/public/bootstrap/js/bootstrap.min.js"></script>
         <script src="/public/bootstrap/js/bootstrap-select.js"></script>
+        <script>
+            var website = angular.module('website', []);
+            website.controller('dataCtrl', function($scope) {
+                $scope.mainMenu = [
+                    {
+                        mainNav: "'&{'mainHome'}'",
+                        mainNavUrl: "#Home",
+                    },
+                    {
+                        mainNav: "'&{'mainPortfolio'}'",
+                        mainNavUrl: "#Portfolio",
+                    },
+                    {
+                        mainNav: "'&{'mainDownload'}'",
+                        mainNavUrl: "#Download",
+                    },
+                    {
+                        mainNav: "'&{'mainContact'}'",
+                        mainNavUrl: "#Contact",
+                    },
+                ];
+
+                $scope.secondMainMenu = [
+                    {
+                        mainNav: "'&{'mainHome'}'",
+                        mainNavUrl: "#Home",
+                    },
+                    {
+                        mainNav: "'&{'mainSkills'}'",
+                        mainNavUrl: "#Skills",
+                    },
+                    {
+                        mainNav: "'&{'mainWork'}'",
+                        mainNavUrl: "#WorkExp",
+                    },
+                    {
+                        mainNav: "'&{'mainEduc'}'",
+                        mainNavUrl: "#EducBackground",
+                    },
+                    {
+                        mainNav: "'&{'mainPortfolio'}'",
+                        mainNavUrl: "#Portfolio",
+                    },
+                    {
+                        mainNav: "'&{'mainDownload'}'",
+                        mainNavUrl: "#Download",
+                    },
+                    {
+                        mainNav: "'&{'mainContact'}'",
+                        mainNavUrl: "#Contact",
+                    },
+                ];
+            });
+        </script>
         #{get 'moreScripts' /}
     </head>
-    <body>
-        <div ng-controller="mainCtrl">
+    <body ng-app="website" ng-controller="dataCtrl">
+        <div>
             <div class="wrapper">
                 <header>
                     <nav class="navbar navbar-default" id="navigation" role="navigation">
@@ -34,22 +88,24 @@
                                         <span class="glyphicon glyphicon-align-justify"></span>
                                     </button>
                                 </div>
-                                <div class="collapse navbar-collapse navbar-left col-md-6" id="navbar-collapse">
-                                    <ul class="list-inline nav navbar-nav">
-                                        <li><a href="">HOME</a></li>
-                                        <li><a href="">RESUME</a></li>
-                                        <li><a href="">PORTFOLIO</a></li>
-                                        <li><a href="">CONTACT</a></li>
+                                <div class="col-md-6 mainMenu">
+                                    <ul class="list-inline nav navbar-nav" ng-repeat="x in mainMenu">
+                                        <li><a href="{{x.mainNavUrl}}" ng-bind="{{x.mainNav}}"></a></li>
                                     </ul>
+                                </div>
+                                <div class="secondMainMenu">
+                                    <div class="collapse navbar-collapse navbar-left col-md-6" id="navbar-collapse">
+                                        <ul class="list-inline nav navbar-nav" ng-repeat="x in secondMainMenu">
+                                            <li><a href="{{x.mainNavUrl}}" ng-bind="{{x.mainNav}}"></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </section>
                         </div>
                     </nav>
                 </header>
 
-                <div class="container">
-                    #{doLayout /}
-                </div>
+                #{doLayout /}
 
                 <footer>
 
