@@ -9,10 +9,16 @@ import models.*;
 
 public class Application extends Controller {
 
-    public static void home() {
+    public static void profile() {
         render();
     }
-    public static void index() {
+    public static void resume() {
+        render();
+    }
+    public static void portfolio() {
+        render();
+    }
+    public static void contact() {
         render();
     }
 

@@ -7,51 +7,73 @@ html, body {
 body {
   width: 100%;
   min-height: 100%;
-  background: #fef6eb;
+  background-image: url("/public/images/bgGreyDots.jpg");
   font-family: "Malgun Gothic", Helvetica, Arial;
 }
 
 /* line 10, ../../sass/sass/hf.scss */
 .page960 {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto;
 }
 
-/* line 14, ../../sass/sass/hf.scss */
-.push50 {
-  height: 50px;
+/* line 16, ../../sass/sass/hf.scss */
+header .main-menu {
+  position: absolute;
+  margin-top: 40px;
+}
+/* line 19, ../../sass/sass/hf.scss */
+header .main-menu .main-menu-li {
+  margin-bottom: 20px;
+}
+/* line 21, ../../sass/sass/hf.scss */
+header .main-menu .main-menu-li .menu-item {
+  text-decoration: none;
+  padding: 10px;
+  background: #55BDC9;
+  border-radius: 3px;
+}
+/* line 27, ../../sass/sass/hf.scss */
+header .main-menu .main-menu-li .menu-item span img {
+  width: 20px;
+  height: 20px;
+}
+/* line 31, ../../sass/sass/hf.scss */
+header .main-menu .main-menu-li .menu-item span .menu-item-name {
+  padding-left: 8px;
 }
 
-/* line 17, ../../sass/sass/hf.scss */
-.push100 {
-  height: 100px;
+/* line 40, ../../sass/sass/hf.scss */
+.wrapper-main {
+  width: 100%;
+  max-width: 920px;
+  border-radius: 5px;
+  background: #fff;
+  height: auto;
+  padding: 10px;
+  margin-left: 40px;
+  -webkit-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
+}
+/* line 51, ../../sass/sass/hf.scss */
+.wrapper-main .mainContact {
+  border-left: 1px solid grey;
+}
+/* line 54, ../../sass/sass/hf.scss */
+.wrapper-main .mainContact .mainSocialIcon .fb-icon {
+  width: 20px;
+  height: 20px;
 }
 
-/* line 20, ../../sass/sass/hf.scss */
-.clear {
+/* line 61, ../../sass/sass/hf.scss */
+footer {
+  width: 820px;
+  padding-bottom: 30px;
   clear: both;
-}
-
-/* line 23, ../../sass/sass/hf.scss */
-.navbar {
-  background-image: url("../img/indexbackground.svg");
-  margin: 0;
-  border: none;
-  padding: 15px;
-}
-
-/* line 29, ../../sass/sass/hf.scss */
-.navbar-header a {
-  height: 5em;
-}
-
-/* line 32, ../../sass/sass/hf.scss */
-.navbar-header a img {
-  max-height: 100%;
-}
-
-/* line 35, ../../sass/sass/hf.scss */
-.navbar-toggle {
-  top: 0px;
-  margin: 0 auto;
+  margin-left: 40px;
+  padding-top: 20px;
+  background-image: url("/public/images/shadow-footer-960.png");
+  background-repeat: no-repeat;
 }

@@ -96,29 +96,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 
   /* line 23, ../../sass/sass/_grid.scss */
-  .mainMenu {
-    display: none;
+  .main-menu {
+    position: relative !important;
   }
 
   /* line 26, ../../sass/sass/_grid.scss */
-  .imgLogo {
-    margin-top: 5px;
-    width: 200px;
+  .main-menu-li {
+    display: inline-block;
+    margin-left: 25px;
   }
 
   /* line 30, ../../sass/sass/_grid.scss */
-  .infoCircle {
-    max-width: 60px;
-    max-height: 60px;
-  }
-  /* line 33, ../../sass/sass/_grid.scss */
-  .infoCircle p {
-    line-height: 4;
+  .wrapper-main {
+    margin-left: 0px !important;
   }
 }
 @media screen and (max-device-width: 480px) {
-  /* line 40, ../../sass/sass/_grid.scss */
+  /* line 36, ../../sass/sass/_grid.scss */
   .mb-hide {
     display: none;
   }
+}
+/* line 1, ../../sass/sass/_common.scss */
+.push50 {
+  height: 50px;
+}
+
+/* line 4, ../../sass/sass/_common.scss */
+.push100 {
+  height: 100px;
+}
+
+/* line 7, ../../sass/sass/_common.scss */
+.clear {
+  clear: both;
+}
+
+/* line 10, ../../sass/sass/_common.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 13, ../../sass/sass/_common.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 16, ../../sass/sass/_common.scss */
+.float-right {
+  float: right;
+}
+
+/* line 19, ../../sass/sass/_common.scss */
+.float-left {
+  float: left;
 }

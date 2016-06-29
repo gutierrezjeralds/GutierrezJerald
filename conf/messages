@@ -2,11 +2,18 @@
 # For example, for French create a messages.fr file
 #
 
-#Main header
-mainHome = Home
-mainDownload = Download
-mainContact = Contact
+#Main Header
+mainProfile = Profile
+mainResume = Resume
 mainPortfolio = Portfolio
-mainSkills = My Skills
-mainWork = Work Experience
-mainEduc = Education Background
+mainContact = Contact
+mainProfileSpanID = mainProfile
+mainResumeSpanID = mainResume
+mainPortfolioSpanID = mainPortfolio
+mainContactSpanID = mainContact
+
+#Main Contact
+mainAddress = Dalipit West, Alitagtag, Batangas
+mainPostalCode = 4205
+mainEmail = gutierrez.jeralds@yahoo.com
+mainPhone = (+63)949-800-8471

@@ -22,95 +22,120 @@
             website.controller('dataCtrl', function($scope) {
                 $scope.mainMenu = [
                     {
-                        mainNav: "'&{'mainHome'}'",
-                        mainNavUrl: "#Home",
+                        mainNav: "'&{'mainProfile'}'",
+                        mainNavUrl: "/Profile",
+                        mainNavImg: "/public/images/menu/profile-menu.svg",
+                        mainNavSpanID: "&{'mainProfileSpanID'}",
+                    },
+                    {
+                        mainNav: "'&{'mainResume'}'",
+                        mainNavUrl: "/Resume",
+                        mainNavImg: "/public/images/menu/resume-menu.svg",
+                        mainNavSpanID: "&{'mainResumeSpanID'}",
                     },
                     {
                         mainNav: "'&{'mainPortfolio'}'",
-                        mainNavUrl: "#Portfolio",
-                    },
-                    {
-                        mainNav: "'&{'mainDownload'}'",
-                        mainNavUrl: "#Download",
+                        mainNavUrl: "/Portfolio",
+                        mainNavImg: "/public/images/menu/portfolio-menu.svg",
+                        mainNavSpanID: "&{'mainPortfolioSpanID'}",
                     },
                     {
                         mainNav: "'&{'mainContact'}'",
-                        mainNavUrl: "#Contact",
+                        mainNavUrl: "/Contact",
+                        mainNavImg: "/public/images/menu/contact-menu.svg",
+                        mainNavSpanID: "&{'mainContactSpanID'}",
                     },
                 ];
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var url = document.location.toString();
+                // Change hash for page-reload
 
-                $scope.secondMainMenu = [
-                    {
-                        mainNav: "'&{'mainHome'}'",
-                        mainNavUrl: "#Home",
-                    },
-                    {
-                        mainNav: "'&{'mainSkills'}'",
-                        mainNavUrl: "#Skills",
-                    },
-                    {
-                        mainNav: "'&{'mainWork'}'",
-                        mainNavUrl: "#WorkExp",
-                    },
-                    {
-                        mainNav: "'&{'mainEduc'}'",
-                        mainNavUrl: "#EducBackground",
-                    },
-                    {
-                        mainNav: "'&{'mainPortfolio'}'",
-                        mainNavUrl: "#Portfolio",
-                    },
-                    {
-                        mainNav: "'&{'mainDownload'}'",
-                        mainNavUrl: "#Download",
-                    },
-                    {
-                        mainNav: "'&{'mainContact'}'",
-                        mainNavUrl: "#Contact",
-                    },
-                ];
+                //Main menu item display
+                var menuProfile = url.substr(url.search("Profile"),10);
+                var menuResume = url.substr(url.search("Resume"),10);
+                var menuPortfolio = url.substr(url.search("Portfolio"),10);
+                var menuContact = url.substr(url.search("Contact"),10);
+                if(menuProfile == ("Profile")){
+                    $('#mainResume').css("display","none");
+                    $('#mainPortfolio').css("display","none");
+                    $('#mainContact').css("display","none");
+                }
+                else if(menuResume == ("Resume")){
+                    $('#mainProfile').css("display","none");
+                    $('#mainPortfolio').css("display","none");
+                    $('#mainContact').css("display","none");
+                }
+                else if(menuPortfolio == ("Portfolio")){
+                    $('#mainProfile').css("display","none");
+                    $('#mainResume').css("display","none");
+                    $('#mainContact').css("display","none");
+                }
+                else if(menuContact == ("Contact")){
+                    $('#mainProfile').css("display","none");
+                    $('#mainResume').css("display","none");
+                    $('#mainPortfolio').css("display","none");
+                }
+                else{
+                    $('#mainResume').css("display","none");
+                    $('#mainPortfolio').css("display","none");
+                    $('#mainContact').css("display","none");
+                }
+                //End of script
             });
         </script>
         #{get 'moreScripts' /}
     </head>
     <body ng-app="website" ng-controller="dataCtrl">
-        <div>
-            <div class="wrapper">
-                <header>
-                    <nav class="navbar navbar-default" id="navigation" role="navigation">
-                        <div class="container">
-                            <section class="header col-md-12 col-xs-12">
-                                <div class="navbar-header col-md-6">
-                                    <a href="" class="navbar-band">
-                                        <!--<img class="imgLogo" src="/public/images/nameTag.png" />-->
-                                    </a>
-                                    <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                                        <span class="glyphicon glyphicon-align-justify"></span>
-                                    </button>
-                                </div>
-                                <div class="col-md-6 mainMenu">
-                                    <ul class="list-inline nav navbar-nav" ng-repeat="x in mainMenu">
-                                        <li><a href="{{x.mainNavUrl}}" ng-bind="{{x.mainNav}}"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="secondMainMenu">
-                                    <div class="collapse navbar-collapse navbar-left col-md-6" id="navbar-collapse">
-                                        <ul class="list-inline nav navbar-nav" ng-repeat="x in secondMainMenu">
-                                            <li><a href="{{x.mainNavUrl}}" ng-bind="{{x.mainNav}}"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section>
+        <div class="push50"></div>
+        <div class="wrapper page960">
+            <header>
+                <ul class="main-menu">
+                    <li ng-repeat="x in mainMenu" class="main-menu-li">
+                        <a ng-href="{{x.mainNavUrl}}" class="menu-item">
+                            <span>
+                                <img ng-src="{{x.mainNavImg}}" />
+                                <span class="menu-item-name" id="{{x.mainNavSpanID}}" ng-bind="{{x.mainNav}}"></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+
+            <div class="wrapper-main">
+                <div class="cointaner">
+                    <div class="row">
+                        <div class="col-md-9">
+                            #{doLayout /}
                         </div>
-                    </nav>
-                </header>
+                        <div class="col-md-3">
+                            <div class="mainContact text-right">
+                                <div class="mainAddress">
+                                    <span>&{'mainAddress'}, &{'mainPostalCode'}</span><br>
+                                    <span>&{'mainEmail'}</span><br>
+                                    <span>&{'mainPhone'}</span>
+                                </div>
+                                <div class="mainSocialIcon">
+                                    <span>
+                                        <a href="https://www.facebook.com/OnesixJerald.BossdOTsupErman">
+                                            <img class="fb-icon" src="/public/images/fb-icon.svg" />
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                #{doLayout /}
-
-                <footer>
-
-                </footer>
             </div>
+
+            <footer>
+                <!--<div class="text-center">
+                    <span>Copyright © 2016 Gutierrez, Jerald S.</span>
+                </div>-->
+            </footer>
         </div>
     </body>
 </html>

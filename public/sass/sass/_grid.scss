@@ -20,20 +20,16 @@
 	.sm-hide {
 		display: none;
 	}
-    .mainMenu{
-        display: none;
+	.main-menu{
+	    position: relative !important;
+	}
+    .main-menu-li{
+        display: inline-block;
+        margin-left: 25px;
     }
-	.imgLogo {
-	    margin-top: 5px;
-		width: 200px;
-	}
-	.infoCircle{
-	    max-width: 60px;
-	    max-height: 60px;
-	    p{
-	        line-height: 4;
-	    }
-	}
+    .wrapper-main{
+        margin-left: 0px !important;
+    }
 }
 
 @media screen and (max-device-width: 480px) {
