@@ -25,10 +25,15 @@
 	}
     .main-menu-li{
         display: inline-block;
-        margin-left: 25px;
+        margin-left: 20px;
     }
     .wrapper-main{
         margin-left: 0px !important;
+    }
+    .mainContact{
+        position: relative !important;
+        width: 94% !important;
+        max-width: 960px !important;
     }
 }
 

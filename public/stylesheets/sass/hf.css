@@ -13,7 +13,7 @@ body {
 
 /* line 10, ../../sass/sass/hf.scss */
 .page960 {
-  width: 100%;
+  width: 94%;
   max-width: 960px;
   margin: 0 auto;
 }
@@ -22,29 +22,30 @@ body {
 header .main-menu {
   position: absolute;
   margin-top: 40px;
+  z-index: 1;
 }
-/* line 19, ../../sass/sass/hf.scss */
+/* line 20, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li {
   margin-bottom: 20px;
 }
-/* line 21, ../../sass/sass/hf.scss */
+/* line 22, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item {
   text-decoration: none;
   padding: 10px;
   background: #55BDC9;
   border-radius: 3px;
 }
-/* line 27, ../../sass/sass/hf.scss */
+/* line 28, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item span img {
   width: 20px;
   height: 20px;
 }
-/* line 31, ../../sass/sass/hf.scss */
+/* line 32, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item span .menu-item-name {
   padding-left: 8px;
 }
 
-/* line 40, ../../sass/sass/hf.scss */
+/* line 41, ../../sass/sass/hf.scss */
 .wrapper-main {
   width: 100%;
   max-width: 920px;
@@ -57,17 +58,20 @@ header .main-menu .main-menu-li .menu-item span .menu-item-name {
   -moz-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
 }
-/* line 51, ../../sass/sass/hf.scss */
+/* line 52, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact {
   border-left: 1px solid grey;
+  position: fixed;
+  width: 15%;
+  max-width: 200px;
 }
-/* line 54, ../../sass/sass/hf.scss */
+/* line 58, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact .mainSocialIcon .fb-icon {
   width: 20px;
   height: 20px;
 }
 
-/* line 61, ../../sass/sass/hf.scss */
+/* line 65, ../../sass/sass/hf.scss */
 footer {
   width: 820px;
   padding-bottom: 30px;

@@ -1,9 +1,166 @@
 #{extends 'main.html' /}
 #{set title:'Gutierrez, Jerald S.' /}
 
-#{get 'moreScripts'}
+#{set 'moreStyles'}
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/resume.css">
+#{/}
+#{set 'moreScripts'}
 <script>
+website.controller('resumeCtrl', function($scope) {
+    $scope.personalInfo = [
+        {
+            personalInfoTitle: "&{'personalInfoGender_1'}",
+            personalInfoName: "&{'personalInfoGender_2'}",
+        },
+        {
+            personalInfoTitle: "&{'personalInfoBirth_1'}",
+            personalInfoName: "&{'personalInfoBirth_2'}",
+        },
+        {
+            personalInfoTitle: "&{'personalInfoStatus_1'}",
+            personalInfoName: "&{'personalInfoStatus_2'}",
+        },
+        {
+            personalInfoTitle: "&{'personalInfoNationality_1'}",
+            personalInfoName: "&{'personalInfoNationality_2'}",
+        },
+        {
+            personalInfoTitle: "&{'personalInfoObjective_1'}",
+            personalInfoName: "&{'personalInfoObjective_2'}",
+        },
+    ];
 
+    $scope.educHead = [
+        {
+            educTitle: "&{'educTertiary'}",
+            educYear: "&{'educTerYear'}",
+        },
+        {
+            educTitle: "&{'educPrimary'}",
+            educYear: "&{'educPriYear'}",
+        },
+        {
+            educTitle: "&{'educSecondary'}",
+            educYear: "&{'educSecYear'}",
+        },
+    ];
+    $scope.educBody = [
+        {
+            educSchool: "&{'educTerSchool'}",
+            educAdd: "&{'educTerAdd'}",
+            educProgram: "&{'educTerProgram'}",
+        },
+        {
+            educSchool: "&{'educPriSchool'}",
+            educAdd: "&{'educPriAdd'}",
+        },
+        {
+            educSchool: "&{'educSecSchool'}",
+            educAdd: "&{'educSecAdd'}",
+        },
+    ];
+
+    $scope.mySkillsList = [
+        {
+            mySkills: "&{'skills_1'}",
+            mySkillsValue: "4",
+        },
+        {
+            mySkills: "&{'skills_2'}",
+            mySkillsValue: "4",
+        },
+        {
+            mySkills: "&{'skills_3'}",
+            mySkillsValue: "5",
+        },
+        {
+            mySkills: "&{'skills_4'}",
+            mySkillsValue: "5",
+        },
+        {
+            mySkills: "&{'skills_5'}",
+            mySkillsValue: "4",
+        },
+        {
+            mySkills: "&{'skills_6'}",
+            mySkillsValue: "4",
+        },
+    ];
+});
 </script>
 #{/}
+
+<div class="wrapper-resume" ng-controller="resumeCtrl">
+    <div class="resume-body">
+        <div class="resume-content personal-info">
+            <h2>
+                <img class="img-circle" src="/public/images/resume/profile-resume.svg">
+                <span>&{'personalInfoTitle'}</span>
+            </h2>
+            <table class="table">
+                <tbody>
+                    <tr ng-repeat="x in personalInfo">
+                        <td>
+                            {{x.personalInfoTitle}}
+                        </td>
+                        <td>
+                            {{x.personalInfoName}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="push25"></div>
+        <div class="resume-content educ-background">
+            <h2>
+                <img class="img-circle" src="/public/images/resume/educ-resume.svg">
+                <span>&{'educTitle'}</span>
+            </h2>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center" ng-repeat="x in educHead">
+                        {{x.educTitle}}<br>
+                        {{x.educYear}}
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center" ng-repeat="x in educBody">
+                        {{x.educSchool}}<br>
+                        {{x.educAdd}}<br>
+                        {{x.educProgram}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="push25"></div>
+        <div class="resume-content my-skills">
+            <h2>
+                <img class="img-circle" src="/public/images/resume/skills-resume.svg">
+                <span>&{'skillsTitle'}</span>
+            </h2>
+            <table class="table">
+                <tbody>
+                <tr ng-repeat="x in mySkillsList">
+                    <td>
+                        <p class="left">{{x.mySkills}}</p>
+                        <progress class="bar skillsValue" max="5" value="{{x.mySkillsValue}}"></progress>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="push25"></div>
+        <div class="resume-content work-exp">
+            <h2>
+                <img class="img-circle" src="/public/images/resume/work-resume.svg">
+                <span>&{'workExpTitle'}</span>
+            </h2>
+        </div>
+        <div class="push25"></div>
+    </div>
+</div>
 

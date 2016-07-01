@@ -17,3 +17,46 @@ mainAddress = Dalipit West, Alitagtag, Batangas
 mainPostalCode = 4205
 mainEmail = gutierrez.jeralds@yahoo.com
 mainPhone = (+63)949-800-8471
+
+#Resume
+personalInfoTitle = Personal Information
+personalInfoGender_1 = Gender
+personalInfoGender_2 = Male
+personalInfoBirth_1 = Date of Birthday
+personalInfoBirth_2 = September 16, 1994
+personalInfoStatus_1 = Status
+personalInfoStatus_2 = Single
+personalInfoAddress_1 = Address
+personalInfoAddress_2 = Dalipit West, Alitagtag, Batangas
+personalInfoNationality_1 = Nationality
+personalInfoNationality_2 = Filipino
+personalInfoObjective_1 = Objective
+personalInfoObjective_2 =
+
+educTitle = Educational Background
+educTertiary = Tertiary
+educTerYear = 2011 - 2015
+educTerProgram = Bachelor of Science in Information Systems
+educTerSchool = De La Salle Lipa
+educTerAdd = Lipa City, Batangas
+educPrimary = Primary
+educPriYear = 2007 - 2011
+educPriSchool = Alitagtag National High School
+educPriAdd = Dominador West, Alitagtag, Batangas
+educSecondary = Secondary
+educSecYear = 2001 - 2007
+educSecSchool = Dalipit West Elementary School
+educSecAdd = Dalipit West, Alitagtag, Batangas
+
+workExpTitle = Work Experience
+
+
+skillsTitle = My Skills
+skills_1 = ☺ Knowledgeable in Web developing such as: HTML, CSS, SASS, Angular JS, Bootstrap, JavaScript, PHP, HTML5, CSS3.
+skills_2 = ☺ Knowledgeable in Play Framework, Source Tree, IntelliJ Idea processing
+skills_3 = ☺ Knowledgeable in reformatting windows operating system platforms
+skills_4 = ☺ Knowledgeable in computer troubleshooting
+skills_5 = ☺ Knowledgeable in Microsoft Word, Excel and Power Point processing
+skills_6 = ☺ Knowledgeable in SAP Business One processing and installation
+skills_7 = ☺ Knowledgeable in database/MySQL and visual basic studio processing
+
