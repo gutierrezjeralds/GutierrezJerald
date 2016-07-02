@@ -1,0 +1,12 @@
+.wrapper-contact{
+    .contact-body{
+        form{
+            textarea{
+                resize: none;
+            }
+            input[type=text]{
+                width: 80%;
+            }
+        }
+    }
+}

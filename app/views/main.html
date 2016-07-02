@@ -73,27 +73,31 @@
                     $('#mainResumeSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
-                    $('#mainProfileHref').title = "";
+                    $('#mainProfileHref').tooltip('disable');
                 }
                 else if(menuResume == ("Resume")){
                     $('#mainProfileSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
+                    $('#mainResumeHref').tooltip('disable');
                 }
                 else if(menuPortfolio == ("Portfolio")){
                     $('#mainProfileSpan').css("display","none");
                     $('#mainResumeSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
+                    $('#mainPortfolioHref').tooltip('disable');
                 }
                 else if(menuContact == ("Contact")){
                     $('#mainProfileSpan').css("display","none");
                     $('#mainResumeSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
+                    $('#mainContactHref').tooltip('disable');
                 }
                 else{
                     $('#mainResumeSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
+                    $('#mainProfileHref').tooltip('disable');
                 }
                 //End of script
 
@@ -142,6 +146,7 @@
                                 </div>
                                 <div class="mainSocialIcon">
                                     <span>
+                                        <img class="skype-icon" src="/public/images/skype-icon.svg" data-toggle="tooltip" data-placement="left" title="&{'skypeID'}" />
                                         <a href="https://www.facebook.com/OnesixJerald.BossdOTsupErman">
                                             <img class="fb-icon" src="/public/images/fb-icon.svg" />
                                         </a>

@@ -71,7 +71,7 @@ header .main-menu .main-menu-li .menu-item:hover {
   max-width: 200px;
 }
 /* line 62, ../../sass/sass/hf.scss */
-.wrapper-main .mainContact .mainSocialIcon .fb-icon {
+.wrapper-main .mainContact .mainSocialIcon img {
   width: 20px;
   height: 20px;
 }

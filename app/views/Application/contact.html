@@ -1,8 +1,23 @@
 #{extends 'main.html' /}
 #{set title:'Gutierrez, Jerald S.' /}
 
+#{set 'moreStyles'}
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/contact.css">
+#{/}
 #{get 'moreScripts'}
 <script>
 
 </script>
 #{/}
+
+<div class="wrapper-contact">
+    <div class="contact-body">
+        <form class="form-group">
+            <textarea class="form-control" rows="10"></textarea>
+            <div class="push25"></div>
+            <input type="text" class="form-control pull-left" placeholder="&{'yourEmail'}"/>
+            <input type="submit" class="btn btn-default pull-right" value="Send" />
+        </form>
+        <div class="push50"></div>
+    </div>
+</div>
