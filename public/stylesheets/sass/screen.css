@@ -117,9 +117,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     width: 94% !important;
     max-width: 960px !important;
   }
+
+  /* line 38, ../../sass/sass/_grid.scss */
+  .footerContent {
+    position: relative !important;
+    width: 94% !important;
+    max-width: 960px !important;
+    top: 0 !important;
+  }
 }
 @media screen and (max-device-width: 480px) {
-  /* line 41, ../../sass/sass/_grid.scss */
+  /* line 47, ../../sass/sass/_grid.scss */
   .mb-hide {
     display: none;
   }
@@ -155,11 +163,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 19, ../../sass/sass/_common.scss */
+.text-indent {
+  text-indent: 20px;
+}
+
+/* line 22, ../../sass/sass/_common.scss */
 .float-right {
   float: right;
 }
 
-/* line 22, ../../sass/sass/_common.scss */
+/* line 25, ../../sass/sass/_common.scss */
 .float-left {
   float: left;
+}
+
+/* line 28, ../../sass/sass/_common.scss */
+.bold {
+  font-weight: 600;
 }

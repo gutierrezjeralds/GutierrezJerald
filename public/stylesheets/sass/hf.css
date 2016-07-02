@@ -20,7 +20,7 @@ body {
 
 /* line 16, ../../sass/sass/hf.scss */
 header .main-menu {
-  position: absolute;
+  position: fixed;
   margin-top: 40px;
   z-index: 1;
 }
@@ -43,9 +43,14 @@ header .main-menu .main-menu-li .menu-item span img {
 /* line 32, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item span .menu-item-name {
   padding-left: 8px;
+  color: #000;
+}
+/* line 37, ../../sass/sass/hf.scss */
+header .main-menu .main-menu-li .menu-item:hover {
+  opacity: .7;
 }
 
-/* line 41, ../../sass/sass/hf.scss */
+/* line 45, ../../sass/sass/hf.scss */
 .wrapper-main {
   width: 100%;
   max-width: 920px;
@@ -58,20 +63,28 @@ header .main-menu .main-menu-li .menu-item span .menu-item-name {
   -moz-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
 }
-/* line 52, ../../sass/sass/hf.scss */
+/* line 56, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact {
   border-left: 1px solid grey;
   position: fixed;
   width: 15%;
   max-width: 200px;
 }
-/* line 58, ../../sass/sass/hf.scss */
+/* line 62, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact .mainSocialIcon .fb-icon {
   width: 20px;
   height: 20px;
 }
+/* line 68, ../../sass/sass/hf.scss */
+.wrapper-main .footerContent {
+  border-left: 1px solid grey;
+  position: fixed;
+  width: 15%;
+  max-width: 200px;
+  top: 600px;
+}
 
-/* line 65, ../../sass/sass/hf.scss */
+/* line 77, ../../sass/sass/hf.scss */
 footer {
   width: 820px;
   padding-bottom: 30px;

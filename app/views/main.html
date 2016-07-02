@@ -22,34 +22,45 @@
             website.controller('dataCtrl', function($scope) {
                 $scope.mainMenu = [
                     {
-                        mainNav: "'&{'mainProfile'}'",
+                        mainNav: "&{'mainProfile'}",
                         mainNavUrl: "/Profile",
                         mainNavImg: "/public/images/menu/profile-menu.svg",
                         mainNavSpanID: "&{'mainProfileSpanID'}",
+                        mainNavHrefID: "&{'mainProfileHrefID'}",
                     },
                     {
-                        mainNav: "'&{'mainResume'}'",
+                        mainNav: "&{'mainResume'}",
                         mainNavUrl: "/Resume",
                         mainNavImg: "/public/images/menu/resume-menu.svg",
                         mainNavSpanID: "&{'mainResumeSpanID'}",
+                        mainNavHrefID: "&{'mainResumeHrefID'}",
                     },
                     {
-                        mainNav: "'&{'mainPortfolio'}'",
+                        mainNav: "&{'mainPortfolio'}",
                         mainNavUrl: "/Portfolio",
                         mainNavImg: "/public/images/menu/portfolio-menu.svg",
                         mainNavSpanID: "&{'mainPortfolioSpanID'}",
+                        mainNavHrefID: "&{'mainPortfolioHrefID'}",
                     },
                     {
-                        mainNav: "'&{'mainContact'}'",
+                        mainNav: "&{'mainContact'}",
                         mainNavUrl: "/Contact",
                         mainNavImg: "/public/images/menu/contact-menu.svg",
                         mainNavSpanID: "&{'mainContactSpanID'}",
+                        mainNavHrefID: "&{'mainContactHrefID'}",
                     },
                 ];
             });
         </script>
         <script type="text/javascript">
             $(document).ready(function(){
+
+                $(window).on("contextmenu",function(e){
+                   return false;
+                });
+
+                $('[data-toggle="tooltip"]').tooltip();
+
                 var url = document.location.toString();
                 // Change hash for page-reload
 
@@ -59,31 +70,43 @@
                 var menuPortfolio = url.substr(url.search("Portfolio"),10);
                 var menuContact = url.substr(url.search("Contact"),10);
                 if(menuProfile == ("Profile")){
-                    $('#mainResume').css("display","none");
-                    $('#mainPortfolio').css("display","none");
-                    $('#mainContact').css("display","none");
+                    $('#mainResumeSpan').css("display","none");
+                    $('#mainPortfolioSpan').css("display","none");
+                    $('#mainContactSpan').css("display","none");
+                    $('#mainProfileHref').title = "";
                 }
                 else if(menuResume == ("Resume")){
-                    $('#mainProfile').css("display","none");
-                    $('#mainPortfolio').css("display","none");
-                    $('#mainContact').css("display","none");
+                    $('#mainProfileSpan').css("display","none");
+                    $('#mainPortfolioSpan').css("display","none");
+                    $('#mainContactSpan').css("display","none");
                 }
                 else if(menuPortfolio == ("Portfolio")){
-                    $('#mainProfile').css("display","none");
-                    $('#mainResume').css("display","none");
-                    $('#mainContact').css("display","none");
+                    $('#mainProfileSpan').css("display","none");
+                    $('#mainResumeSpan').css("display","none");
+                    $('#mainContactSpan').css("display","none");
                 }
                 else if(menuContact == ("Contact")){
-                    $('#mainProfile').css("display","none");
-                    $('#mainResume').css("display","none");
-                    $('#mainPortfolio').css("display","none");
+                    $('#mainProfileSpan').css("display","none");
+                    $('#mainResumeSpan').css("display","none");
+                    $('#mainPortfolioSpan').css("display","none");
                 }
                 else{
-                    $('#mainResume').css("display","none");
-                    $('#mainPortfolio').css("display","none");
-                    $('#mainContact').css("display","none");
+                    $('#mainResumeSpan').css("display","none");
+                    $('#mainPortfolioSpan').css("display","none");
+                    $('#mainContactSpan').css("display","none");
                 }
                 //End of script
+
+                $(document).keyup(function(evtobj) {
+                    if (!(evtobj.altKey || evtobj.ctrlKey || evtobj.shiftKey)){
+                        if (evtobj.keyCode == 16){
+                            return false;
+                        }
+                        if (evtobj.keyCode == 17){
+                            return false;
+                        }
+                    }
+                });
             });
         </script>
         #{get 'moreScripts' /}
@@ -94,10 +117,10 @@
             <header>
                 <ul class="main-menu">
                     <li ng-repeat="x in mainMenu" class="main-menu-li">
-                        <a ng-href="{{x.mainNavUrl}}" class="menu-item">
+                        <a ng-href="{{x.mainNavUrl}}" class="menu-item" id="{{x.mainNavHrefID}}" data-toggle="tooltip" data-placement="right" title="{{x.mainNav}}">
                             <span>
                                 <img ng-src="{{x.mainNavImg}}" />
-                                <span class="menu-item-name" id="{{x.mainNavSpanID}}" ng-bind="{{x.mainNav}}"></span>
+                                <span class="menu-item-name" id="{{x.mainNavSpanID}}">{{x.mainNav}}</span>
                             </span>
                         </a>
                     </li>
@@ -123,6 +146,12 @@
                                             <img class="fb-icon" src="/public/images/fb-icon.svg" />
                                         </a>
                                     </span>
+                                </div>
+                            </div>
+                            <div class="push25"></div>
+                            <div class="footerContent">
+                                <div class="text-right">
+                                    <span>&{'copyRight'}</span>
                                 </div>
                             </div>
                         </div>

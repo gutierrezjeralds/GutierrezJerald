@@ -35,6 +35,12 @@
         width: 94% !important;
         max-width: 960px !important;
     }
+    .footerContent{
+        position: relative !important;
+        width: 94% !important;
+        max-width: 960px !important;
+        top: 0 !important;
+    }
 }
 
 @media screen and (max-device-width: 480px) {

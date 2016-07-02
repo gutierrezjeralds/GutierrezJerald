@@ -14,7 +14,7 @@ body {
 }
 header{
     .main-menu{
-        position: absolute;
+        position: fixed;
         margin-top: 40px;
         z-index: 1;
         .main-menu-li{
@@ -31,7 +31,11 @@ header{
                     }
                     .menu-item-name{
                         padding-left: 8px;
+                        color: #000;
                     }
+                }
+                &:hover{
+                    opacity: .7;
                 }
             }
         }
@@ -61,7 +65,15 @@ header{
             }
         }
     }
+    .footerContent{
+        border-left: 1px solid grey;
+        position: fixed;
+        width: 15%;
+        max-width: 200px;
+        top: 600px;
+    }
 }
+
 footer{
     width: 820px;
     padding-bottom: 30px;

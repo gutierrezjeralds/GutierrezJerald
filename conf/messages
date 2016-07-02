@@ -7,10 +7,17 @@ mainProfile = Profile
 mainResume = Resume
 mainPortfolio = Portfolio
 mainContact = Contact
-mainProfileSpanID = mainProfile
-mainResumeSpanID = mainResume
-mainPortfolioSpanID = mainPortfolio
-mainContactSpanID = mainContact
+mainProfileSpanID = mainProfileSpan
+mainResumeSpanID = mainResumeSpan
+mainPortfolioSpanID = mainPortfolioSpan
+mainContactSpanID = mainContactSpan
+mainProfileHrefID = mainProfileHref
+mainResumeHrefID = mainResumeHref
+mainPortfolioHrefID = mainPortfolioHref
+mainContactHrefID = mainContactHref
+
+#Main Footer
+copyRight = Copyright © 2016 Gutierrez, Jerald S.
 
 #Main Contact
 mainAddress = Dalipit West, Alitagtag, Batangas
@@ -18,7 +25,7 @@ mainPostalCode = 4205
 mainEmail = gutierrez.jeralds@yahoo.com
 mainPhone = (+63)949-800-8471
 
-#Resume
+#Personal Information
 personalInfoTitle = Personal Information
 personalInfoGender_1 = Gender
 personalInfoGender_2 = Male
@@ -31,8 +38,9 @@ personalInfoAddress_2 = Dalipit West, Alitagtag, Batangas
 personalInfoNationality_1 = Nationality
 personalInfoNationality_2 = Filipino
 personalInfoObjective_1 = Objective
-personalInfoObjective_2 =
+personalInfoObjective_2 = To apply in your company in the field of Information Technology/System and to gain experience that would utilize my knowledge and skills at the same time, to contribute to the achievement of the organizational goals and objectives.
 
+#Education Background
 educTitle = Educational Background
 educTertiary = Tertiary
 educTerYear = 2011 - 2015
@@ -48,9 +56,28 @@ educSecYear = 2001 - 2007
 educSecSchool = Dalipit West Elementary School
 educSecAdd = Dalipit West, Alitagtag, Batangas
 
+#Work Experience
 workExpTitle = Work Experience
+workExpKinpo_1 = Kinpo Electronics Philippines Inc.
+workExpKinpo_2 = Kinpo Electronics Philippines Inc.
+workExpKinpo_2 = Junior Software Engineer (Web Developer)
+workExpKinpo_3 = August 2015 – Up to present
+workExpKinpo_4 = - Website Maintenance
+workExpKinpo_5 = - Creating New Website
+workExpIntern_1 = Sorosoro Ibaba Development Cooperative
+workExpIntern_2 = On-the-Job Trainee
+workExpIntern_3 = July 2014 – October 2014
+workExpIntern_4 = - Create Web Internal Login System
+workExpIntern_5 = - Conduct training in SAP B1
+workExpIntern_6 = - Assist the staff for their training in SAP B1
+workExpStudent_1 = De La Salle Lipa
+workExpStudent_2 = Student Assistant
+workExpStudent_3 = April 2011 – March 2015
+workExpStudent_4 = - Trouble shooting of defective computers / laptops
+of the teachers, employees and school computers laboratory
 
 
+#My Skills
 skillsTitle = My Skills
 skills_1 = ☺ Knowledgeable in Web developing such as: HTML, CSS, SASS, Angular JS, Bootstrap, JavaScript, PHP, HTML5, CSS3.
 skills_2 = ☺ Knowledgeable in Play Framework, Source Tree, IntelliJ Idea processing
@@ -60,3 +87,27 @@ skills_5 = ☺ Knowledgeable in Microsoft Word, Excel and Power Point processing
 skills_6 = ☺ Knowledgeable in SAP Business One processing and installation
 skills_7 = ☺ Knowledgeable in database/MySQL and visual basic studio processing
 
+#Seminars
+seminarTitle = Seminars Attended
+seminar_1_v1 = 2013
+seminar_1_v2 = Training and Seminar on Drug Abuse Prevention Education
+seminar_2_v1 = 2013
+seminar_2_v2 = Startup Forum and IT-BPM Career Talk
+seminar_3_v1 = 2013
+seminar_3_v2 = Adobe Photoshop CS5 Seminar
+seminar_4_v1 = 2013
+seminar_4_v2 = Microsoft Technology Seminar (Roadshow)
+seminar_5_v1 = 2014
+seminar_5_v2 = Overview of Enchanted Kingdom’s Park Operations and Information Technology Management
+seminar_6_v1 = 2014
+seminar_6_v2 = Batangas Information Technology Students’ Conference 2014 – “Global Competitiveness through Mobile and Ubiquitous Computing”
+seminar_7_v1 = 2014
+seminar_7_v2 = JPCS Explore IT Seminar
+seminar_8_v1 = 2014
+seminar_8_v2 = Accenture Overview and Millenials Seminar
+seminar_9_v1 = 2014
+seminar_9_v2 = Basic Computer Troubleshooting Seminar
+seminar_10_v1 = 2014
+seminar_10_v2 = PC Assembly Seminar
+seminar_11_v1 = 2016
+seminar_11_v2 = HTML5, CSS3, Javascript Training
