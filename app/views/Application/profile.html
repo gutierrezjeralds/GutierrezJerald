@@ -2,10 +2,57 @@
 #{set title:'Gutierrez, Jerald S.' /}
 
 #{set 'moreStyles'}
-<link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/index.css">
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/profile.css">
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/progress-circle.css">
 #{/}
 
 #{set 'moreScripts'}
-
+<script>
+website.controller('profileCtrl', function($scope) {
+    $scope.profileSkills = [
+        {
+            profileSkillsName: "&{'profileSkills_1'}",
+            profileSkillsValue: "98",
+        },
+        {
+            profileSkillsName: "&{'profileSkills_2'}",
+            profileSkillsValue: "96",
+        },
+        {
+            profileSkillsName: "&{'profileSkills_3'}",
+            profileSkillsValue: "95",
+        },
+        {
+            profileSkillsName: "&{'profileSkills_4'}",
+            profileSkillsValue: "95",
+        },
+    ];
+});
+</script>
 #{/}
+
+<div class="wrapper-profiile" ng-controller="profileCtrl">
+    <div class="profile-content">
+        <div class="profile-header">
+
+        </div>
+        <div class="profile-body">
+
+        </div>
+        <div class="profile-footer">
+            <ul>
+                <li ng-repeat="x in profileSkills">
+                    <div class="c100 p{{x.profileSkillsValue}} small">
+                        <span>{{x.profileSkillsValue}}%</span>
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="push25"></div>
+    </div>
+</div>
 

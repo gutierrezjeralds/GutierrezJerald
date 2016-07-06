@@ -27,6 +27,12 @@ mainPhone = (+63)949-800-8471
 skypeID = Skype ID: gutierrez.jerald
 yourEmail = Enter your Email Address
 
+#Profile Skills
+profileSkills_1 = HTML
+profileSkills_2 = CSS
+profileSkills_3 = JavaScript
+profileSkills_4 = Jquery
+
 #Personal Information
 personalInfoTitle = Personal Information
 personalInfoGender_1 = Gender
