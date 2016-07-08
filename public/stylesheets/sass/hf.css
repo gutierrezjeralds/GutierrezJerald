@@ -26,7 +26,7 @@ header .main-menu {
 }
 /* line 20, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 /* line 22, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item {
@@ -45,12 +45,12 @@ header .main-menu .main-menu-li .menu-item span .menu-item-name {
   padding-left: 8px;
   color: #000;
 }
-/* line 37, ../../sass/sass/hf.scss */
-header .main-menu .main-menu-li .menu-item:hover {
-  opacity: .7;
+/* line 39, ../../sass/sass/hf.scss */
+header .main-menu .main-menu-li .menu-item:hover span .menu-item-name {
+  color: #fff;
 }
 
-/* line 45, ../../sass/sass/hf.scss */
+/* line 49, ../../sass/sass/hf.scss */
 .wrapper-main {
   width: 100%;
   max-width: 920px;
@@ -63,34 +63,23 @@ header .main-menu .main-menu-li .menu-item:hover {
   -moz-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
 }
-/* line 56, ../../sass/sass/hf.scss */
+/* line 60, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact {
   border-left: 1px solid grey;
   position: fixed;
   width: 15%;
   max-width: 200px;
 }
-/* line 62, ../../sass/sass/hf.scss */
+/* line 66, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact .mainSocialIcon img {
   width: 20px;
   height: 20px;
 }
-/* line 68, ../../sass/sass/hf.scss */
+/* line 72, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent {
   border-left: 1px solid grey;
   position: fixed;
   width: 15%;
   max-width: 200px;
-  top: 600px;
-}
-
-/* line 77, ../../sass/sass/hf.scss */
-footer {
-  width: 820px;
-  padding-bottom: 30px;
-  clear: both;
-  margin-left: 40px;
-  padding-top: 20px;
-  background-image: url("/public/images/shadow-footer-960.png");
-  background-repeat: no-repeat;
+  top: 580px;
 }

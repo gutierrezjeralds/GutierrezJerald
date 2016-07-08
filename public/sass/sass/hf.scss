@@ -18,7 +18,7 @@ header{
         margin-top: 40px;
         z-index: 1;
         .main-menu-li{
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             .menu-item{
                 text-decoration: none;
                 padding: 10px;
@@ -35,7 +35,11 @@ header{
                     }
                 }
                 &:hover{
-                    opacity: .7;
+                    span{
+                        .menu-item-name{
+                            color: #fff;
+                        }
+                    }
                 }
             }
         }
@@ -70,16 +74,6 @@ header{
         position: fixed;
         width: 15%;
         max-width: 200px;
-        top: 600px;
+        top: 580px;
     }
-}
-
-footer{
-    width: 820px;
-    padding-bottom: 30px;
-    clear: both;
-    margin-left: 40px;
-    padding-top: 20px;
-    background-image: url("/public/images/shadow-footer-960.png");
-    background-repeat: no-repeat;
 }

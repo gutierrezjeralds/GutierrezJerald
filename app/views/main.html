@@ -7,6 +7,7 @@
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/hf.css">
+        <link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/hover.css">
         <link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/screen.css">
         <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap.min.css">
@@ -121,7 +122,7 @@
             <header>
                 <ul class="main-menu">
                     <li ng-repeat="x in mainMenu" class="main-menu-li">
-                        <a ng-href="{{x.mainNavUrl}}" class="menu-item" id="{{x.mainNavHrefID}}" data-toggle="tooltip" data-placement="right" title="{{x.mainNav}}">
+                        <a ng-href="{{x.mainNavUrl}}" class="menu-item hvr-bounce-to-right" id="{{x.mainNavHrefID}}" data-toggle="tooltip" data-placement="right" title="{{x.mainNav}}">
                             <span>
                                 <img ng-src="{{x.mainNavImg}}" />
                                 <span class="menu-item-name" id="{{x.mainNavSpanID}}">{{x.mainNav}}</span>
@@ -163,12 +164,6 @@
                     </div>
                 </div>
             </div>
-
-            <footer>
-                <!--<div class="text-center">
-                    <span>Copyright © 2016 Gutierrez, Jerald S.</span>
-                </div>-->
-            </footer>
         </div>
         <div class="push25"></div>
     </body>
