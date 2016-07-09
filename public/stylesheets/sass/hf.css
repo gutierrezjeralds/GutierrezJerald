@@ -32,25 +32,28 @@ header .main-menu .main-menu-li {
 header .main-menu .main-menu-li .menu-item {
   text-decoration: none;
   padding: 10px;
-  background: #55BDC9;
   border-radius: 3px;
 }
-/* line 28, ../../sass/sass/hf.scss */
+/* line 26, ../../sass/sass/hf.scss */
+header .main-menu .main-menu-li .menu-item.menu-item-bg {
+  background: #55BDC9;
+}
+/* line 30, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item span img {
   width: 20px;
   height: 20px;
 }
-/* line 32, ../../sass/sass/hf.scss */
+/* line 34, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item span .menu-item-name {
   padding-left: 8px;
   color: #000;
 }
-/* line 39, ../../sass/sass/hf.scss */
+/* line 41, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item:hover span .menu-item-name {
   color: #fff;
 }
 
-/* line 49, ../../sass/sass/hf.scss */
+/* line 51, ../../sass/sass/hf.scss */
 .wrapper-main {
   width: 100%;
   max-width: 920px;
@@ -63,23 +66,23 @@ header .main-menu .main-menu-li .menu-item:hover span .menu-item-name {
   -moz-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
 }
-/* line 60, ../../sass/sass/hf.scss */
+/* line 62, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact {
   border-left: 1px solid grey;
   position: fixed;
   width: 15%;
   max-width: 200px;
 }
-/* line 66, ../../sass/sass/hf.scss */
+/* line 68, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact .mainSocialIcon img {
   width: 20px;
   height: 20px;
 }
-/* line 69, ../../sass/sass/hf.scss */
+/* line 71, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact .mainSocialIcon img:hover {
   opacity: .7;
 }
-/* line 75, ../../sass/sass/hf.scss */
+/* line 77, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent {
   border-left: 1px solid grey;
   position: fixed;
@@ -87,7 +90,7 @@ header .main-menu .main-menu-li .menu-item:hover span .menu-item-name {
   max-width: 200px;
   top: 580px;
 }
-/* line 81, ../../sass/sass/hf.scss */
+/* line 83, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent.profileFooter {
   top: 480px !important;
 }

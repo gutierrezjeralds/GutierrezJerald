@@ -22,8 +22,10 @@ header{
             .menu-item{
                 text-decoration: none;
                 padding: 10px;
-                background: #55BDC9;
                 border-radius: 3px;
+                &.menu-item-bg{
+                    background: #55BDC9;
+                }
                 span{
                     img{
                         width: 20px;

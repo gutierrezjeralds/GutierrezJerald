@@ -165,12 +165,17 @@ website.controller('resumeCtrl', function($scope) {
 <script>
 $(document).ready(function(){
     <!-- Animate Progress bar for mySkills -->
-    $(".mySkillsProgress1, .mySkillsProgress3, .mySkillsProgress4, .mySkillsProgress5").animate({
-        width: "95%"
-    }, 3000);
-    $(".mySkillsProgress2, .mySkillsProgress6, .mySkillsProgress7").animate({
-        width: "90%"
-    }, 3000);
+    var go = true;
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 600 && go) {
+            $(".mySkillsProgress1, .mySkillsProgress3, .mySkillsProgress4, .mySkillsProgress5").animate({
+                width: "95%"
+            }, 3000);
+            $(".mySkillsProgress2, .mySkillsProgress6, .mySkillsProgress7").animate({
+                width: "90%"
+            }, 3000);
+        }
+    });
     <!-- END -->
 });
 </script>
@@ -183,7 +188,7 @@ $(document).ready(function(){
                 <img class="img-circle" src="/public/images/resume/profile-resume.svg">
                 <span>&{'personalInfoTitle'}</span>
             </h2>
-            <table class="table">
+            <table class="table table-condensed">
                 <tbody>
                     <tr ng-repeat="x in personalInfo">
                         <td>
@@ -202,7 +207,7 @@ $(document).ready(function(){
                 <img class="img-circle" src="/public/images/resume/educ-resume.svg">
                 <span>&{'educTitle'}</span>
             </h2>
-            <table class="table">
+            <table class="table table-condensed">
                 <tbody>
                     <tr ng-repeat="x in educBackground">
                         <td>
@@ -223,7 +228,7 @@ $(document).ready(function(){
                 <img class="img-circle" src="/public/images/resume/skills-resume.svg">
                 <span>&{'skillsTitle'}</span>
             </h2>
-            <table class="table">
+            <table class="table table-condensed">
                 <tbody>
                 <tr ng-repeat="x in mySkillsList">
                     <td>
@@ -249,7 +254,7 @@ $(document).ready(function(){
                 <img class="img-circle" src="/public/images/resume/work-resume.svg">
                 <span>&{'workExpTitle'}</span>
             </h2>
-            <table class="table">
+            <table class="table table-condensed">
                 <tbody>
                     <tr ng-repeat="x in workExperience">
                         <td>
@@ -272,7 +277,7 @@ $(document).ready(function(){
                 <img class="img-circle" src="/public/images/resume/seminar-resume.svg">
                 <span>&{'seminarTitle'}</span>
             </h2>
-            <table class="table">
+            <table class="table table-condensed">
                 <tbody>
                     <tr ng-repeat="x in Seminars">
                         <td>

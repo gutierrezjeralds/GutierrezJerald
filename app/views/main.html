@@ -85,6 +85,7 @@
                     $('#mainContactSpan').css("display","none");
                     $('#mainProfileHref').tooltip('disable');
                     $('#footer').addClass("profileFooter");
+                    $('#mainProfileHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
                 }
                 else if(menuResume == ("Resume")){
                     $('#mainProfileSpan').css("display","none");
@@ -92,6 +93,7 @@
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
                     $('#mainResumeHref').tooltip('disable');
+                    $('#mainResumeHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
                 }
                 else if(menuPortfolio == ("Portfolio")){
                     $('#mainProfileSpan').css("display","none");
@@ -99,6 +101,7 @@
                     $('#mainResumeSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
                     $('#mainPortfolioHref').tooltip('disable');
+                    $('#mainPortfolioHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
                 }
                 else if(menuContact == ("Contact")){
                     $('#mainProfileSpan').css("display","none");
@@ -106,6 +109,7 @@
                     $('#mainResumeSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactHref').tooltip('disable');
+                    $('#mainContactHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
                 }
                 else{
                     $('#mainProfileSpan').css("display","none");
@@ -113,6 +117,7 @@
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
                     $('#mainHomeHref').tooltip('disable');
+                    $('#mainHomeHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
                 }
                 //End of script
 
@@ -135,8 +140,8 @@
         <div class="wrapper page960">
             <header>
                 <ul class="main-menu">
-                    <li ng-repeat="x in mainMenu" class="main-menu-li">
-                        <a ng-href="{{x.mainNavUrl}}" class="menu-item hvr-bounce-to-right" id="{{x.mainNavHrefID}}" data-toggle="tooltip" data-placement="right" title="{{x.mainNav}}">
+                    <li ng-repeat="x in mainMenu" class="main-menu-li" id="li-{{x.mainNavSpanID}}">
+                        <a ng-href="{{x.mainNavUrl}}" class="menu-item menu-item-bg hvr-bounce-to-right" id="{{x.mainNavHrefID}}" data-toggle="tooltip" data-placement="right" title="{{x.mainNav}}">
                             <span>
                                 <img ng-src="{{x.mainNavImg}}" />
                                 <span class="menu-item-name sm-hide" id="{{x.mainNavSpanID}}">{{x.mainNav}}</span>
