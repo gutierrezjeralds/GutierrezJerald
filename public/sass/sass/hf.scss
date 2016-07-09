@@ -66,6 +66,9 @@ header{
             img{
                 width: 20px;
                 height: 20px;
+                &:hover{
+                    opacity: .7;
+                }
             }
         }
     }
@@ -75,5 +78,8 @@ header{
         width: 15%;
         max-width: 200px;
         top: 580px;
+        &.profileFooter{
+            top: 480px !important;
+        }
     }
 }

@@ -23,6 +23,13 @@
             website.controller('dataCtrl', function($scope) {
                 $scope.mainMenu = [
                     {
+                        mainNav: "&{'mainHome'}",
+                        mainNavUrl: "/",
+                        mainNavImg: "/public/images/menu/home-menu.svg",
+                        mainNavSpanID: "&{'mainHomeSpanID'}",
+                        mainNavHrefID: "&{'mainHomeHrefID'}",
+                    },
+                    {
                         mainNav: "&{'mainProfile'}",
                         mainNavUrl: "/Profile",
                         mainNavImg: "/public/images/menu/profile-menu.svg",
@@ -66,39 +73,46 @@
                 // Change hash for page-reload
 
                 //Main menu item display
+                var menuHome = url.substr(url.search("Profile"),10);
                 var menuProfile = url.substr(url.search("Profile"),10);
                 var menuResume = url.substr(url.search("Resume"),10);
                 var menuPortfolio = url.substr(url.search("Portfolio"),10);
                 var menuContact = url.substr(url.search("Contact"),10);
                 if(menuProfile == ("Profile")){
+                    $('#mainHomeSpan').css("display","none");
                     $('#mainResumeSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
                     $('#mainProfileHref').tooltip('disable');
+                    $('#footer').addClass("profileFooter");
                 }
                 else if(menuResume == ("Resume")){
                     $('#mainProfileSpan').css("display","none");
+                    $('#mainHomeSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
                     $('#mainResumeHref').tooltip('disable');
                 }
                 else if(menuPortfolio == ("Portfolio")){
                     $('#mainProfileSpan').css("display","none");
+                    $('#mainHomeSpan').css("display","none");
                     $('#mainResumeSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
                     $('#mainPortfolioHref').tooltip('disable');
                 }
                 else if(menuContact == ("Contact")){
                     $('#mainProfileSpan').css("display","none");
+                    $('#mainHomeSpan').css("display","none");
                     $('#mainResumeSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactHref').tooltip('disable');
                 }
                 else{
+                    $('#mainProfileSpan').css("display","none");
                     $('#mainResumeSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
-                    $('#mainProfileHref').tooltip('disable');
+                    $('#mainHomeHref').tooltip('disable');
                 }
                 //End of script
 
@@ -125,7 +139,7 @@
                         <a ng-href="{{x.mainNavUrl}}" class="menu-item hvr-bounce-to-right" id="{{x.mainNavHrefID}}" data-toggle="tooltip" data-placement="right" title="{{x.mainNav}}">
                             <span>
                                 <img ng-src="{{x.mainNavImg}}" />
-                                <span class="menu-item-name" id="{{x.mainNavSpanID}}">{{x.mainNav}}</span>
+                                <span class="menu-item-name sm-hide" id="{{x.mainNavSpanID}}">{{x.mainNav}}</span>
                             </span>
                         </a>
                     </li>
@@ -155,7 +169,7 @@
                                 </div>
                             </div>
                             <div class="push25"></div>
-                            <div class="footerContent">
+                            <div id="footer" class="footerContent">
                                 <div class="text-right">
                                     <span>&{'copyRight'}</span>
                                 </div>

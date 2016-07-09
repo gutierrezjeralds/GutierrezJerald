@@ -75,11 +75,19 @@ header .main-menu .main-menu-li .menu-item:hover span .menu-item-name {
   width: 20px;
   height: 20px;
 }
-/* line 72, ../../sass/sass/hf.scss */
+/* line 69, ../../sass/sass/hf.scss */
+.wrapper-main .mainContact .mainSocialIcon img:hover {
+  opacity: .7;
+}
+/* line 75, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent {
   border-left: 1px solid grey;
   position: fixed;
   width: 15%;
   max-width: 200px;
   top: 580px;
+}
+/* line 81, ../../sass/sass/hf.scss */
+.wrapper-main .footerContent.profileFooter {
+  top: 480px !important;
 }

@@ -2,18 +2,50 @@
 	.lg-hide {
 		display: none;
 	}
-	.secondMainMenu{
-	    display: none;
-	}
 }
 
 @media screen and (min-width : 768px) and (max-width : 979px) {
 	.md-hide {
 		display: none;
 	}
-	.secondMainMenu{
-	    display: none;
+	.main-menu{
+	    position: relative !important;
+        .main-menu-li{
+            display: inline-block;
+            margin-left: 20px;
+        }
 	}
+    .wrapper-main{
+        margin-left: 0px !important;
+        .mainContact{
+            position: relative !important;
+            width: 94% !important;
+            max-width: 960px !important;
+        }
+        .footerContent{
+            position: relative !important;
+            width: 94% !important;
+            max-width: 960px !important;
+            top: 0 !important;
+        }
+    }
+    .wrapper-profile{
+        .profile-img{
+            img{
+                display: block;
+                margin: auto;
+            }
+        }
+        .profile-name{
+            margin-left: 0px !important;
+            text-align: center;
+        }
+        .profile-footer{
+            .list-group{
+                margin-left: 100px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -22,24 +54,36 @@
 	}
 	.main-menu{
 	    position: relative !important;
+        .main-menu-li{
+            display: inline-block;
+            margin-left: 20px;
+        }
 	}
-    .main-menu-li{
-        display: inline-block;
-        margin-left: 20px;
-    }
     .wrapper-main{
         margin-left: 0px !important;
+        .mainContact{
+            position: relative !important;
+            width: 94% !important;
+            max-width: 960px !important;
+        }
+        .footerContent{
+            position: relative !important;
+            width: 94% !important;
+            max-width: 960px !important;
+            top: 0 !important;
+        }
     }
-    .mainContact{
-        position: relative !important;
-        width: 94% !important;
-        max-width: 960px !important;
-    }
-    .footerContent{
-        position: relative !important;
-        width: 94% !important;
-        max-width: 960px !important;
-        top: 0 !important;
+    .wrapper-profile{
+        .profile-img{
+            img{
+                display: block;
+                margin: auto;
+            }
+        }
+        .profile-name{
+            margin-left: 0px !important;
+            text-align: center;
+        }
     }
 }
 

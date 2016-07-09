@@ -3,7 +3,7 @@
 # ~~~~
 
 # Home page
-GET     /                                        Application.profile
+GET     /                                        Application.home
 GET     /Profile                                 Application.profile
 GET     /Resume                                  Application.resume
 GET     /Portfolio                               Application.portfolio
