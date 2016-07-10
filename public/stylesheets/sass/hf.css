@@ -92,5 +92,9 @@ header .main-menu .main-menu-li .menu-item:hover span .menu-item-name {
 }
 /* line 83, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent.profileFooter {
-  top: 480px !important;
+  top: 480px;
+}
+/* line 86, ../../sass/sass/hf.scss */
+.wrapper-main .footerContent.contactFooter {
+  top: 470px;
 }

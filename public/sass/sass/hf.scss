@@ -81,7 +81,10 @@ header{
         max-width: 200px;
         top: 580px;
         &.profileFooter{
-            top: 480px !important;
+            top: 480px;
+        }
+        &.contactFooter{
+            top: 470px;
         }
     }
 }

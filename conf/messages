@@ -31,10 +31,13 @@ mainEmail = gutierrez.jeralds@yahoo.com
 mainPhone = (+63)949-800-8471
 skypeID = Skype ID: gutierrez.jerald
 yourEmail = Enter your Email Address
+yourMessage = Enter your Message
+yourName = Enter your Name
+contactAsk = Ask me anything.
 
 #Profile Skills
 profileName = Gutierrez, Jerald S.
-profilePosition = Web Developing - FrontEnd
+profilePosition = Web Developer - Front End
 profileAbout = Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 profileSkills_1 = HTML
 profileSkills_2 = CSS
@@ -95,7 +98,7 @@ of the teachers, employees and school computers laboratory
 
 #My Skills
 skillsTitle = My Skills
-skills_1 = ☺ Knowledgeable in Web developing such as: HTML, CSS, SASS, Angular JS, Bootstrap, JavaScript, PHP, HTML5, CSS3.
+skills_1 = ☺ Knowledgeable in Web developing such as: HTML, CSS, SASS, Angular JS, Bootstrap, JavaScript, JQuery, PHP, HTML5, CSS3.
 skills_2 = ☺ Knowledgeable in Play Framework, Source Tree, IntelliJ Idea processing
 skills_3 = ☺ Knowledgeable in reformatting windows operating system platforms
 skills_4 = ☺ Knowledgeable in computer troubleshooting

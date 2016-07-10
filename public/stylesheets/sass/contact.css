@@ -1,8 +1,16 @@
-/* line 4, ../../sass/sass/contact.scss */
+/* line 1, ../../sass/sass/contact.scss */
+.wrapper-contact {
+  padding: 10px;
+}
+/* line 5, ../../sass/sass/contact.scss */
 .wrapper-contact .contact-body form textarea {
   resize: none;
 }
-/* line 7, ../../sass/sass/contact.scss */
+/* line 8, ../../sass/sass/contact.scss */
 .wrapper-contact .contact-body form input[type=text] {
-  width: 80%;
+  width: 48%;
+}
+/* line 12, ../../sass/sass/contact.scss */
+.wrapper-contact .contact-body form .input-submit a {
+  margin-left: 10px;
 }

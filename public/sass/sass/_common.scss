@@ -41,3 +41,14 @@
     background: -moz-linear-gradient(bottom right, #55BDC9, #fff); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #55BDC9, #fff); /* Standard syntax */
 }
+.btn-primary{
+    background: #55BDC9 !important;
+    border: none !important;
+}
+.btn-default{
+    background: #307bbb !important;
+    border: none !important;
+    &:hover{
+        color: #fff !important;
+    }
+}

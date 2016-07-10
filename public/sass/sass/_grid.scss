@@ -27,6 +27,13 @@
             width: 94% !important;
             max-width: 960px !important;
             top: 0 !important;
+            &.profileFooter{
+                top: 0 !important;
+            }
+            &.contactFooter{
+                top: 0 !important;
+
+            }
         }
     }
     .wrapper-profile{

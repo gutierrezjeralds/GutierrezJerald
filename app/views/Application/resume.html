@@ -73,21 +73,21 @@ website.controller('resumeCtrl', function($scope) {
             mySkillsValue: "95",
             mySkillsClass: "mySkillsProgress4",
         },
-        {
-            mySkills: "&{'skills_5'}",
-            mySkillsValue: "95",
-            mySkillsClass: "mySkillsProgress5",
-        },
-        {
-            mySkills: "&{'skills_6'}",
-            mySkillsValue: "90",
-            mySkillsClass: "mySkillsProgress6",
-        },
-        {
-            mySkills: "&{'skills_7'}",
-            mySkillsValue: "90",
-            mySkillsClass: "mySkillsProgress7",
-        },
+        //{
+        //    mySkills: "&{'skills_5'}",
+        //    mySkillsValue: "95",
+        //    mySkillsClass: "mySkillsProgress5",
+        //},
+        //{
+        //    mySkills: "&{'skills_6'}",
+        //    mySkillsValue: "90",
+        //    mySkillsClass: "mySkillsProgress6",
+        //},
+        //{
+        //    mySkills: "&{'skills_7'}",
+        //    mySkillsValue: "90",
+        //    mySkillsClass: "mySkillsProgress7",
+        //},
     ];
 
     $scope.workExperience = [
@@ -166,16 +166,27 @@ website.controller('resumeCtrl', function($scope) {
 $(document).ready(function(){
     <!-- Animate Progress bar for mySkills -->
     var go = true;
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 600 && go) {
-            $(".mySkillsProgress1, .mySkillsProgress3, .mySkillsProgress4, .mySkillsProgress5").animate({
-                width: "95%"
-            }, 3000);
-            $(".mySkillsProgress2, .mySkillsProgress6, .mySkillsProgress7").animate({
-                width: "90%"
-            }, 3000);
-        }
-    });
+    //$(window).scroll(function() {
+        //if ($(this).scrollTop() > 600 && go) {
+            setTimeout(function(){
+                $('.progress .bar').each(function() {
+                    var me = $(this);
+                    var perc = me.attr("data-percentage");
+                    //TODO: left and right text handling
+                    var current_perc = 0;
+                    var progress = setInterval(function() {
+                        if (current_perc>=perc) {
+                            clearInterval(progress);
+                        } else {
+                            current_perc +=1;
+                            me.css('width', (current_perc)+'%');
+                        }
+                        me.text((current_perc)+'%');
+                    }, 80);
+                });
+            },300);
+        //}
+    //});
     <!-- END -->
 });
 </script>
@@ -240,7 +251,7 @@ $(document).ready(function(){
                         </div> -->
                         <div class="progress-container">
                             <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-success {{x.mySkillsClass}}" data-toggle="tooltip" data-placement="bottom" title="{{x.mySkillsValue}}%" style="width:0%"></div>
+                                <div class="bar progress-bar progress-bar-success" data-percentage="{{x.mySkillsValue}}" data-toggle="tooltip" data-placement="bottom" title="{{x.mySkillsValue}}%" style="width:0%"></div>
                             </div>
                         </div>
                     </td>
