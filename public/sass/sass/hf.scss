@@ -4,13 +4,24 @@ html, body {
 body {
     width: 100%;
     min-height: 100%;
-    background-image: url("/public/images/bgGreyDots.jpg");
+    background-image: url("/public/images/background/bgGreyDots.jpg");
     font-family: "Malgun Gothic", Helvetica, Arial;
 }
 .page960 {
     width: 94%;
     max-width: 960px;
     margin: 0 auto;
+}
+.slideshow{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.slideshow img{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
 }
 header{
     .main-menu{
@@ -28,6 +39,7 @@ header{
                 }
                 span{
                     img{
+                        position: relative !important;
                         width: 20px;
                         height: 20px;
                     }
@@ -52,7 +64,7 @@ header{
     width: 100%;
     max-width: 920px;
     border-radius: 5px;
-    background: #fff;
+    background: transparent;
     height: auto;
     padding: 10px;
     margin-left: 40px;
@@ -66,6 +78,7 @@ header{
         max-width: 200px;
         .mainSocialIcon{
             img{
+                position: relative !important;
                 width: 20px;
                 height: 20px;
                 &:hover{

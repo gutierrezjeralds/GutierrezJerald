@@ -7,7 +7,7 @@ html, body {
 body {
   width: 100%;
   min-height: 100%;
-  background-image: url("/public/images/bgGreyDots.jpg");
+  background-image: url("/public/images/background/bgGreyDots.jpg");
   font-family: "Malgun Gothic", Helvetica, Arial;
 }
 
@@ -18,47 +18,63 @@ body {
   margin: 0 auto;
 }
 
-/* line 16, ../../sass/sass/hf.scss */
+/* line 15, ../../sass/sass/hf.scss */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* line 20, ../../sass/sass/hf.scss */
+.slideshow img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* line 27, ../../sass/sass/hf.scss */
 header .main-menu {
   position: fixed;
   margin-top: 40px;
   z-index: 1;
 }
-/* line 20, ../../sass/sass/hf.scss */
+/* line 31, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li {
   margin-bottom: 5px;
 }
-/* line 22, ../../sass/sass/hf.scss */
+/* line 33, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item {
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
 }
-/* line 26, ../../sass/sass/hf.scss */
+/* line 37, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item.menu-item-bg {
   background: #55BDC9;
 }
-/* line 30, ../../sass/sass/hf.scss */
+/* line 41, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item span img {
+  position: relative !important;
   width: 20px;
   height: 20px;
 }
-/* line 34, ../../sass/sass/hf.scss */
+/* line 46, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item span .menu-item-name {
   padding-left: 8px;
   color: #000;
 }
-/* line 41, ../../sass/sass/hf.scss */
+/* line 53, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item:hover span .menu-item-name {
   color: #fff;
 }
 
-/* line 51, ../../sass/sass/hf.scss */
+/* line 63, ../../sass/sass/hf.scss */
 .wrapper-main {
   width: 100%;
   max-width: 920px;
   border-radius: 5px;
-  background: #fff;
+  background: transparent;
   height: auto;
   padding: 10px;
   margin-left: 40px;
@@ -66,23 +82,24 @@ header .main-menu .main-menu-li .menu-item:hover span .menu-item-name {
   -moz-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
 }
-/* line 62, ../../sass/sass/hf.scss */
+/* line 74, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact {
   border-left: 1px solid grey;
   position: fixed;
   width: 15%;
   max-width: 200px;
 }
-/* line 68, ../../sass/sass/hf.scss */
+/* line 80, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact .mainSocialIcon img {
+  position: relative !important;
   width: 20px;
   height: 20px;
 }
-/* line 71, ../../sass/sass/hf.scss */
+/* line 84, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact .mainSocialIcon img:hover {
   opacity: .7;
 }
-/* line 77, ../../sass/sass/hf.scss */
+/* line 90, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent {
   border-left: 1px solid grey;
   position: fixed;
@@ -90,11 +107,11 @@ header .main-menu .main-menu-li .menu-item:hover span .menu-item-name {
   max-width: 200px;
   top: 580px;
 }
-/* line 83, ../../sass/sass/hf.scss */
+/* line 96, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent.profileFooter {
   top: 480px;
 }
-/* line 86, ../../sass/sass/hf.scss */
+/* line 99, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent.contactFooter {
   top: 470px;
 }

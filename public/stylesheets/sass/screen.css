@@ -268,3 +268,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .btn-default:hover {
   color: #fff !important;
 }
+
+/* line 55, ../../sass/sass/_common.scss */
+.form-control {
+  background: transparent !important;
+}

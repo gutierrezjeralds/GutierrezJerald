@@ -12,26 +12,27 @@
 }
 /* line 8, ../../sass/sass/resume.scss */
 .wrapper-resume .resume-body .resume-content h2 img {
+  position: relative !important;
   width: 50px;
   height: 50px;
   border: 2px solid !important;
   border-radius: 50px;
   padding: 5px;
 }
-/* line 16, ../../sass/sass/resume.scss */
+/* line 17, ../../sass/sass/resume.scss */
 .wrapper-resume .resume-body .resume-content .progress-bar {
   background-color: #55BDC9 !important;
 }
-/* line 19, ../../sass/sass/resume.scss */
+/* line 20, ../../sass/sass/resume.scss */
 .wrapper-resume .resume-body .resume-content .progress.active .progress-bar {
   -webkit-transition: none !important;
   transition: none !important;
 }
-/* line 25, ../../sass/sass/resume.scss */
+/* line 26, ../../sass/sass/resume.scss */
 .wrapper-resume .resume-body .personal-info td:first-child {
   width: 30%;
 }
-/* line 30, ../../sass/sass/resume.scss */
+/* line 31, ../../sass/sass/resume.scss */
 .wrapper-resume .resume-body .seminars td:first-child {
   width: 20%;
 }
