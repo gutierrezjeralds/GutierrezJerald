@@ -4,22 +4,29 @@
 
 #Main Header
 mainHome = Home
-mainProfile = Profile
+mainAbout = About
 mainResume = Resume
 mainPortfolio = Portfolio
 mainContact = Contact
 
 mainHomeSpanID = mainHomeSpan
-mainProfileSpanID = mainProfileSpan
+mainAboutSpanID = mainAboutSpan
 mainResumeSpanID = mainResumeSpan
 mainPortfolioSpanID = mainPortfolioSpan
 mainContactSpanID = mainContactSpan
 
 mainHomeHrefID = mainHomeHref
-mainProfileHrefID = mainProfileHref
+mainAboutHrefID = mainAboutHref
 mainResumeHrefID = mainResumeHref
 mainPortfolioHrefID = mainPortfolioHref
 mainContactHrefID = mainContactHref
+
+socialFb = Facebook
+socialFbHrefID = socialFbHref
+socialFbSpanID = socialFbSpan
+socialSkype = Skype
+socialSkypeHrefID = socialSkypeHref
+socialSkypeSpanID = socialSkypeSpan
 
 #Main Footer
 copyRight = Copyright © 2016 Gutierrez, Jerald S.
@@ -33,16 +40,19 @@ skypeID = Skype ID: gutierrez.jerald
 yourEmail = Enter your Email Address
 yourMessage = Enter your Message
 yourName = Enter your Name
-contactAsk = Ask me anything.
+contactAsk = Ask me anything...
 
-#Profile Skills
-profileName = Gutierrez, Jerald S.
-profilePosition = Web Developer - Front End
-profileAbout = Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-profileSkills_1 = HTML
-profileSkills_2 = CSS
-profileSkills_3 = JavaScript
-profileSkills_4 = Jquery
+#Home
+homeName = Gutierrez, Jerald S.
+homePosition = Web Developer - Front-End
+
+#About
+aboutTitle = About...
+aboutInfo = Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+aboutSkills_1 = HTML
+aboutSkills_2 = CSS
+aboutSkills_3 = JavaScript
+aboutSkills_4 = Jquery
 
 #Personal Information
 personalInfoTitle = Personal Information

@@ -4,7 +4,7 @@
 
 # Home page
 GET     /                                        Application.home
-GET     /Profile                                 Application.profile
+GET     /About                                   Application.about
 GET     /Resume                                  Application.resume
 GET     /Portfolio                               Application.portfolio
 GET     /Contact                                 Application.contact

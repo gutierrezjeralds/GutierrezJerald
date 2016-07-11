@@ -1,21 +1,22 @@
-.wrapper-profile{
-    .profile-content{
+.wrapper-about{
+    .about-content{
         padding: 10px;
-        .profile-header{
-            .profile-header-content{
+        .about-header{
+            .about-header-content{
                 padding: 10px;
-                .profile-img{
+                .about-img{
                     img{
+                        position: relative !important;
                         width: 100px;
                         height: 100px;
                     }
                 }
-                .profile-name{
+                .about-name{
                     margin-left: -40px;
                 }
             }
         }
-        .profile-footer{
+        .about-footer{
             .list-group-item{
                 background: none !important;
                 border: none !important;

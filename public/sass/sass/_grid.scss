@@ -2,6 +2,11 @@
 	.lg-hide {
 		display: none;
 	}
+	.wrapper-home{
+	    .home-footer{
+	        margin-left: 120px;
+	    }
+	}
 }
 
 @media screen and (min-width : 768px) and (max-width : 979px) {
@@ -15,42 +20,38 @@
             margin-left: 20px;
         }
 	}
+	.social-main-menu{
+        .social-menu-li{
+            display: none !important;
+        }
+	}
     .wrapper-main{
         margin-left: 0px !important;
         .mainContact{
             position: relative !important;
             width: 94% !important;
             max-width: 960px !important;
+            .mainSocialIcon{
+                display: inline-block !important;
+            }
         }
         .footerContent{
             position: relative !important;
             width: 94% !important;
             max-width: 960px !important;
             top: 0 !important;
-            &.profileFooter{
-                top: 0 !important;
-            }
-            &.contactFooter{
-                top: 0 !important;
-
-            }
         }
     }
-    .wrapper-profile{
-        .profile-img{
+    .wrapper-home{
+        .home-img{
             img{
                 display: block;
                 margin: auto;
             }
         }
-        .profile-name{
+        .home-name{
             margin-left: 0px !important;
             text-align: center;
-        }
-        .profile-footer{
-            .list-group{
-                margin-left: 100px;
-            }
         }
     }
 }
@@ -66,12 +67,20 @@
             margin-left: 20px;
         }
 	}
+	.social-main-menu{
+        .social-menu-li{
+            display: none !important;
+        }
+	}
     .wrapper-main{
         margin-left: 0px !important;
         .mainContact{
             position: relative !important;
             width: 94% !important;
             max-width: 960px !important;
+            .mainSocialIcon{
+                display: inline-block !important;
+            }
         }
         .footerContent{
             position: relative !important;
@@ -80,16 +89,19 @@
             top: 0 !important;
         }
     }
-    .wrapper-profile{
-        .profile-img{
+    .wrapper-home{
+        .home-img{
             img{
                 display: block;
                 margin: auto;
             }
         }
-        .profile-name{
+        .home-name{
             margin-left: 0px !important;
             text-align: center;
+        }
+        .list-group-item{
+            padding: 10px 10px !important;
         }
     }
 }

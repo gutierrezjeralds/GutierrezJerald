@@ -58,6 +58,35 @@ header{
             }
         }
     }
+    .social-main-menu{
+        position: fixed;
+        margin-top: 40px;
+        z-index: 2;
+        .social-menu-li{
+            display: none;
+            cursor: pointer;
+            margin-bottom: 5px;
+            .menu-item{
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 3px;
+                &.menu-item-bg{
+                    background: #55BDC9;
+                }
+                span{
+                    img{
+                        position: relative !important;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .menu-item-name{
+                        display: none;
+                        padding-left: 8px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .wrapper-main{
@@ -93,11 +122,14 @@ header{
         width: 15%;
         max-width: 200px;
         top: 580px;
-        &.profileFooter{
-            top: 480px;
+        &.aboutFooter{
+            top: 420px;
         }
         &.contactFooter{
             top: 470px;
+        }
+        &.homeFooter{
+            top: 460px;
         }
     }
 }

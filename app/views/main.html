@@ -4,7 +4,7 @@
     <head>
         <title>#{get 'title' /}</title>
         <meta charset="${_response_encoding}">
-        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/profile.ico'}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/hf.css">
         <link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/hover.css">
@@ -30,11 +30,11 @@
                         mainNavHrefID: "&{'mainHomeHrefID'}",
                     },
                     {
-                        mainNav: "&{'mainProfile'}",
-                        mainNavUrl: "/Profile",
-                        mainNavImg: "/public/images/menu/profile-menu.svg",
-                        mainNavSpanID: "&{'mainProfileSpanID'}",
-                        mainNavHrefID: "&{'mainProfileHrefID'}",
+                        mainNav: "&{'mainAbout'}",
+                        mainNavUrl: "/About",
+                        mainNavImg: "/public/images/menu/about-menu.svg",
+                        mainNavSpanID: "&{'mainAboutSpanID'}",
+                        mainNavHrefID: "&{'mainAboutHrefID'}",
                     },
                     {
                         mainNav: "&{'mainResume'}",
@@ -58,6 +58,22 @@
                         mainNavHrefID: "&{'mainContactHrefID'}",
                     },
                 ];
+                $scope.socialMenu = [
+                    {
+                        socialNav: "&{'socialFb'}",
+                        socialNavUrl: "https://www.facebook.com/OnesixJerald.BossdOTsupErman",
+                        socialNavImg: "/public/images/social/fb-icon-menu.svg",
+                        socialNavHrefID: "&{'socialFbHrefID'}",
+                        socialNavSpanID: "&{'socialFbSpanID'}",
+                    },
+                    {
+                        socialNav: "&{'skypeID'}",
+                        socialNavUrl: "",
+                        socialNavImg: "/public/images/social/skype-icon-menu.svg",
+                        socialNavHrefID: "&{'socialSkypeHrefID'}",
+                        socialNavSpanID: "&{'socialSkypeSpanID'}",
+                    },
+                ];
             });
         </script>
         <script type="text/javascript">
@@ -73,22 +89,21 @@
                 // Change hash for page-reload
 
                 //Main menu item display
-                var menuHome = url.substr(url.search("Profile"),10);
-                var menuProfile = url.substr(url.search("Profile"),10);
+                var menuAbout = url.substr(url.search("About"),10);
                 var menuResume = url.substr(url.search("Resume"),10);
                 var menuPortfolio = url.substr(url.search("Portfolio"),10);
                 var menuContact = url.substr(url.search("Contact"),10);
-                if(menuProfile == ("Profile")){
+                if(menuAbout == ("About")){
                     $('#mainHomeSpan').css("display","none");
                     $('#mainResumeSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
-                    $('#mainProfileHref').tooltip('disable');
-                    $('#footer').addClass("profileFooter");
-                    $('#mainProfileHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
+                    $('#mainAboutHref').tooltip('disable');
+                    $('#footer').addClass("aboutFooter");
+                    $('#mainAboutHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
                 }
                 else if(menuResume == ("Resume")){
-                    $('#mainProfileSpan').css("display","none");
+                    $('#mainAboutSpan').css("display","none");
                     $('#mainHomeSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
@@ -96,7 +111,7 @@
                     $('#mainResumeHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
                 }
                 else if(menuPortfolio == ("Portfolio")){
-                    $('#mainProfileSpan').css("display","none");
+                    $('#mainAboutSpan').css("display","none");
                     $('#mainHomeSpan').css("display","none");
                     $('#mainResumeSpan').css("display","none");
                     $('#mainContactSpan').css("display","none");
@@ -104,7 +119,7 @@
                     $('#mainPortfolioHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
                 }
                 else if(menuContact == ("Contact")){
-                    $('#mainProfileSpan').css("display","none");
+                    $('#mainAboutSpan').css("display","none");
                     $('#mainHomeSpan').css("display","none");
                     $('#mainResumeSpan').css("display","none");
                     $('#mainPortfolioSpan').css("display","none");
@@ -113,12 +128,22 @@
                     $('#mainContactHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
                 }
                 else{
-                    $('#mainProfileSpan').css("display","none");
-                    $('#mainResumeSpan').css("display","none");
-                    $('#mainPortfolioSpan').css("display","none");
-                    $('#mainContactSpan').css("display","none");
-                    $('#mainHomeHref').tooltip('disable');
-                    $('#mainHomeHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
+                    $('.main-menu-li').css("display","none");
+                    $('.mainSocialIcon').css("display","none");
+                    $('.social-menu-li').css("display","block");
+                    $('body').addClass("slideshow");
+                    $('.wrapper-main').css("background-image","url('/public/images/background/bgGreyDots.jpg')");
+                    $('#socialFbHref').mouseover(function() {
+                        $('#socialFbSpan').css("display","inline-block");
+                    });
+                    $('#socialSkypeHref').mouseover(function() {
+                        $('#socialSkypeSpan').css("display","inline-block");
+                    });
+                    $('#socialFbHref,#socialSkypeHref').mouseout(function() {
+                        $('#socialFbSpan').css("display","none");
+                        $('#socialSkypeSpan').css("display","none");
+                    });
+                    $('#footer').addClass("homeFooter");
                 }
                 //End of script
 
@@ -134,34 +159,39 @@
                 });
 
                 <!-- Slide Background image -->
-                //var images = new Array('http://placehold.it/250x150','http://placehold.it/250x150/123456','http://placehold.it/250x150/dbca98');
+                var image1 = "/public/images/background/background_1.jpg";
+                var image2 = "/public/images/background/background_2.jpg";
+                var image3 = "/public/images/background/background_3.jpg";
+                var images = new Array(image1,image2,image3);
                 var nextimage = 0;
 
                 doSlideshow();
 
-                function doSlideshow()
-                {
-                    if($('.slideshowimage').length!=0)
-                    {
-                        $('.slideshowimage').fadeOut(500,function(){slideshowFadeIn();$(this).remove()});
-                    }
-                    else
-                    {
+                function doSlideshow(){
+                    if($('.slideshowimage').length!=0){
+                        $('.slideshowimage').fadeOut(500,function(){
+                            slideshowFadeIn();
+                            $(this).remove()
+                        });
+                    }else{
                         slideshowFadeIn();
                     }
                 }
-                function slideshowFadeIn()
-                {
-                    $('.slideshow').prepend($('<img class="slideshowimage" src="'+images[nextimage++]+'" style="display:none">').fadeIn(500,function(){setTimeout(doSlideshow,1000);}));
-                    if(nextimage>=images.length)
-                        nextimage=0;
+                function slideshowFadeIn(){
+                    $('.slideshow').prepend(
+                        $('<img class="slideshowimage" src="'+images[nextimage++]+'" style="display:none">').fadeIn(500,function(){
+                            setTimeout(doSlideshow,2000);
+                        })
+                    );
+                    if(nextimage >= images.length)
+                        nextimage = 0;
                 }
                 <!-- END -->
             });
         </script>
         #{get 'moreScripts' /}
     </head>
-    <body class="slideshow" ng-app="website" ng-controller="dataCtrl">
+    <body ng-app="website" ng-controller="dataCtrl">
         <div class="push25"></div>
         <div class="wrapper page960">
             <header>
@@ -171,6 +201,16 @@
                             <span>
                                 <img ng-src="{{x.mainNavImg}}" />
                                 <span class="menu-item-name sm-hide" id="{{x.mainNavSpanID}}">{{x.mainNav}}</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="social-main-menu">
+                    <li ng-repeat="x in socialMenu" class="social-menu-li">
+                        <a ng-href="{{x.socialNavUrl}}" class="menu-item menu-item-bg hvr-bounce-to-right" id="{{x.socialNavHrefID}}">
+                            <span>
+                                <img ng-src="{{x.socialNavImg}}" />
+                                <span class="menu-item-name sm-hide" id="{{x.socialNavSpanID}}">{{x.socialNav}}</span>
                             </span>
                         </a>
                     </li>
@@ -192,9 +232,9 @@
                                 </div>
                                 <div class="mainSocialIcon">
                                     <span>
-                                        <img class="skype-icon" src="/public/images/skype-icon.svg" data-toggle="tooltip" data-placement="left" title="&{'skypeID'}" />
+                                        <img class="skype-icon" src="/public/images/social/skype-icon.svg" data-toggle="tooltip" data-placement="left" title="&{'skypeID'}" />
                                         <a href="https://www.facebook.com/OnesixJerald.BossdOTsupErman">
-                                            <img class="fb-icon" src="/public/images/fb-icon.svg" />
+                                            <img class="fb-icon" src="/public/images/social/fb-icon.svg" />
                                         </a>
                                     </span>
                                 </div>
