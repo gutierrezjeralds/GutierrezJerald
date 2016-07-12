@@ -1,5 +1,5 @@
 #{extends 'main.html' /}
-#{set title:'Gutierrez, Jerald S.' /}
+#{set title:'Gutierrez | Resume' /}
 
 #{set 'moreStyles'}
 <link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/resume.css">
@@ -56,31 +56,38 @@ website.controller('resumeCtrl', function($scope) {
         {
             mySkills: "&{'skills_1'}",
             mySkillsValue: "95",
+            mySkillsClass: "mySkillsProgress1",
         },
         {
             mySkills: "&{'skills_2'}",
             mySkillsValue: "90",
+            mySkillsClass: "mySkillsProgress2",
         },
         {
             mySkills: "&{'skills_3'}",
             mySkillsValue: "95",
+            mySkillsClass: "mySkillsProgress3",
         },
         {
             mySkills: "&{'skills_4'}",
             mySkillsValue: "95",
+            mySkillsClass: "mySkillsProgress4",
         },
-        {
-            mySkills: "&{'skills_5'}",
-            mySkillsValue: "95",
-        },
-        {
-            mySkills: "&{'skills_6'}",
-            mySkillsValue: "90",
-        },
-        {
-            mySkills: "&{'skills_7'}",
-            mySkillsValue: "90",
-        },
+        //{
+        //    mySkills: "&{'skills_5'}",
+        //    mySkillsValue: "95",
+        //    mySkillsClass: "mySkillsProgress5",
+        //},
+        //{
+        //    mySkills: "&{'skills_6'}",
+        //    mySkillsValue: "90",
+        //    mySkillsClass: "mySkillsProgress6",
+        //},
+        //{
+        //    mySkills: "&{'skills_7'}",
+        //    mySkillsValue: "90",
+        //    mySkillsClass: "mySkillsProgress7",
+        //},
     ];
 
     $scope.workExperience = [
@@ -155,16 +162,44 @@ website.controller('resumeCtrl', function($scope) {
     ];
 });
 </script>
+<script>
+$(document).ready(function(){
+    <!-- Animate Progress bar for mySkills -->
+    var go = true;
+    //$(window).scroll(function() {
+        //if ($(this).scrollTop() > 600 && go) {
+            setTimeout(function(){
+                $('.progress .bar').each(function() {
+                    var me = $(this);
+                    var perc = me.attr("data-percentage");
+                    //TODO: left and right text handling
+                    var current_perc = 0;
+                    var progress = setInterval(function() {
+                        if (current_perc>=perc) {
+                            clearInterval(progress);
+                        } else {
+                            current_perc +=1;
+                            me.css('width', (current_perc)+'%');
+                        }
+                        me.text((current_perc)+'%');
+                    }, 80);
+                });
+            },300);
+        //}
+    //});
+    <!-- END -->
+});
+</script>
 #{/}
 
 <div class="wrapper-resume" ng-controller="resumeCtrl">
     <div class="resume-body">
-        <div class="resume-content personal-info">
+        <div class="resume-content personal-info box-shadow">
             <h2>
-                <img class="img-circle" src="/public/images/resume/profile-resume.svg">
+                <img class="img-circle" src="/public/images/resume/personal-resume.svg">
                 <span>&{'personalInfoTitle'}</span>
             </h2>
-            <table class="table">
+            <table class="table table-condensed">
                 <tbody>
                     <tr ng-repeat="x in personalInfo">
                         <td>
@@ -178,12 +213,12 @@ website.controller('resumeCtrl', function($scope) {
             </table>
         </div>
         <div class="push25"></div>
-        <div class="resume-content educ-background">
+        <div class="resume-content educ-background box-shadow">
             <h2>
                 <img class="img-circle" src="/public/images/resume/educ-resume.svg">
                 <span>&{'educTitle'}</span>
             </h2>
-            <table class="table">
+            <table class="table table-condensed">
                 <tbody>
                     <tr ng-repeat="x in educBackground">
                         <td>
@@ -199,19 +234,24 @@ website.controller('resumeCtrl', function($scope) {
             </table>
         </div>
         <div class="push25"></div>
-        <div class="resume-content my-skills">
+        <div class="resume-content my-skills box-shadow">
             <h2>
                 <img class="img-circle" src="/public/images/resume/skills-resume.svg">
                 <span>&{'skillsTitle'}</span>
             </h2>
-            <table class="table">
+            <table class="table table-condensed">
                 <tbody>
                 <tr ng-repeat="x in mySkillsList">
                     <td>
                         <p>{{x.mySkills}}</p>
-                        <div class="progress">
+                        <!-- <div class="progress">
                             <div class="progress-bar" data-toggle="tooltip" data-placement="bottom" title="{{x.mySkillsValue}}%" style="width:{{x.mySkillsValue}}%">
                                 <span class="sr-only">{{x.mySkillsValue}}%</span>
+                            </div>
+                        </div> -->
+                        <div class="progress-container">
+                            <div class="progress progress-striped active">
+                                <div class="bar progress-bar progress-bar-success" data-percentage="{{x.mySkillsValue}}" data-toggle="tooltip" data-placement="bottom" title="{{x.mySkillsValue}}%" style="width:0%"></div>
                             </div>
                         </div>
                     </td>
@@ -220,12 +260,12 @@ website.controller('resumeCtrl', function($scope) {
             </table>
         </div>
         <div class="push25"></div>
-        <div class="resume-content work-exp">
+        <div class="resume-content work-exp box-shadow">
             <h2>
                 <img class="img-circle" src="/public/images/resume/work-resume.svg">
                 <span>&{'workExpTitle'}</span>
             </h2>
-            <table class="table">
+            <table class="table table-condensed">
                 <tbody>
                     <tr ng-repeat="x in workExperience">
                         <td>
@@ -243,12 +283,12 @@ website.controller('resumeCtrl', function($scope) {
             </table>
         </div>
         <div class="push25"></div>
-        <div class="resume-content seminars">
+        <div class="resume-content seminars box-shadow">
             <h2>
                 <img class="img-circle" src="/public/images/resume/seminar-resume.svg">
                 <span>&{'seminarTitle'}</span>
             </h2>
-            <table class="table">
+            <table class="table table-condensed">
                 <tbody>
                     <tr ng-repeat="x in Seminars">
                         <td>
@@ -261,7 +301,6 @@ website.controller('resumeCtrl', function($scope) {
                 </tbody>
             </table>
         </div>
-        <div class="push25"></div>
     </div>
 </div>
 

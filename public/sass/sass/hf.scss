@@ -4,13 +4,31 @@ html, body {
 body {
     width: 100%;
     min-height: 100%;
-    background-image: url("/public/images/bgGreyDots.jpg");
+    background-image: url("/public/images/background/bgGreyDots.jpg");
     font-family: "Malgun Gothic", Helvetica, Arial;
+}
+.body-bg{
+    background: url("/public/images/background/body-bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .page960 {
     width: 94%;
     max-width: 960px;
     margin: 0 auto;
+}
+.slideshow{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.slideshow img{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
 }
 header{
     .main-menu{
@@ -22,10 +40,13 @@ header{
             .menu-item{
                 text-decoration: none;
                 padding: 10px;
-                background: #55BDC9;
                 border-radius: 3px;
+                &.menu-item-bg{
+                    background: #55BDC9;
+                }
                 span{
                     img{
+                        position: relative !important;
                         width: 20px;
                         height: 20px;
                     }
@@ -44,13 +65,42 @@ header{
             }
         }
     }
+    .social-main-menu{
+        position: fixed;
+        margin-top: 40px;
+        z-index: 2;
+        .social-menu-li{
+            display: none;
+            cursor: pointer;
+            margin-bottom: 5px;
+            .menu-item{
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 3px;
+                &.menu-item-bg{
+                    background: #55BDC9;
+                }
+                span{
+                    img{
+                        position: relative !important;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .menu-item-name{
+                        display: none;
+                        padding-left: 8px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .wrapper-main{
     width: 100%;
     max-width: 920px;
     border-radius: 5px;
-    background: #fff;
+    background: transparent;
     height: auto;
     padding: 10px;
     margin-left: 40px;
@@ -63,9 +113,20 @@ header{
         width: 15%;
         max-width: 200px;
         .mainSocialIcon{
-            img{
-                width: 20px;
-                height: 20px;
+            padding-top: 5px;
+            a{
+                text-decoration: none;
+                padding-left: 5px;
+                img{
+                    position: relative !important;
+                    width: 20px;
+                    height: 20px;
+                    background: #55BDC9;
+                    border-radius: 2px;
+                    &:hover{
+                        background: #307bbb;
+                    }
+                }
             }
         }
     }
@@ -75,5 +136,19 @@ header{
         width: 15%;
         max-width: 200px;
         top: 580px;
+        &.aboutFooter{
+            top: 420px;
+        }
+        &.contactFooter{
+            top: 470px;
+        }
+        &.homeFooter{
+            top: 460px;
+        }
+    }
+    .home-font-color{
+        span{
+            color: #000 !important;
+        }
     }
 }

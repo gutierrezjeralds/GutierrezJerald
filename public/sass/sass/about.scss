@@ -1,0 +1,27 @@
+.wrapper-about{
+    .about-content{
+        padding: 10px;
+        .about-header{
+            .about-header-content{
+                padding: 10px;
+                .about-img{
+                    img{
+                        position: relative !important;
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+                .about-name{
+                    margin-left: -40px;
+                }
+            }
+        }
+        .about-footer{
+            .list-group-item{
+                background: none !important;
+                border: none !important;
+                display: inline-block !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+#{extends 'main.html' /}
+#{set title:'Gutierrez | Home' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/home.css">
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+#{/}
+
+#{get 'moreScripts'}
+<script>
+website.controller('homeCtrl', function($scope) {
+    $scope.homeMenu = [
+        {
+            homeMenuName: "&{'mainAbout'}",
+            homeMenuUrl: "/About",
+            homeMenuImg: "/public/images/menu/about-menu.svg"
+        },
+        {
+            homeMenuName: "&{'mainResume'}",
+            homeMenuUrl: "/Resume",
+            homeMenuImg: "/public/images/menu/resume-menu.svg"
+        },
+        {
+            homeMenuName: "&{'mainPortfolio'}",
+            homeMenuUrl: "/Portfolio",
+            homeMenuImg: "/public/images/menu/portfolio-menu.svg"
+        },
+        {
+            homeMenuName: "&{'mainContact'}",
+            homeMenuUrl: "/Contact",
+            homeMenuImg: "/public/images/menu/contact-menu.svg"
+        },
+    ];
+});
+</script>
+#{/}
+
+<div class="wrapper-home" ng-controller="homeCtrl">
+    <div class="push25"></div>
+    <div class="home-content">
+        <div class="home-body  box-shadow col-md-12">
+            <div class="home-img col-md-5">
+                <img class="img-thumbnail" src="https://scontent.fmnl3-2.fna.fbcdn.net/v/t1.0-9/10403460_1106230512736373_3536844801586647999_n.jpg?oh=03edc3c527fea15ef56859534d3bfe79&oe=58318E27" />
+            </div>
+            <div class="home-name col-md-7">
+                <h1>
+                    <span>&{'homeName'}</span><br>
+                </h1>
+                <span class="home-position-text">&{'homePosition'}</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="push50"></div>
+        <div class="box-shadow col-md-12">
+            <div class="push25"></div>
+            <div class="home-footer col-md-offset-1 col-xs-offset-2 col-sm-offset-3">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="x in homeMenu">
+                        <a ng-href="{{x.homeMenuUrl}}" class="home-menu-item hvr-float-shadow" data-toggle="tooltip" data-placement="top" title="{{x.homeMenuName}}">
+                            <span>
+                                <img ng-src="{{x.homeMenuImg}}" />
+                                <p class="homeMenuName text-center">{{x.homeMenuName}}</p>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="push25"></div>
+    </div>
+</div>

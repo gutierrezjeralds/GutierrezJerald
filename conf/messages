@@ -3,18 +3,36 @@
 #
 
 #Main Header
-mainProfile = Profile
+mainHome = Home
+mainAbout = About
 mainResume = Resume
 mainPortfolio = Portfolio
 mainContact = Contact
-mainProfileSpanID = mainProfileSpan
+
+mainHomeSpanID = mainHomeSpan
+mainAboutSpanID = mainAboutSpan
 mainResumeSpanID = mainResumeSpan
 mainPortfolioSpanID = mainPortfolioSpan
 mainContactSpanID = mainContactSpan
-mainProfileHrefID = mainProfileHref
+
+mainHomeHrefID = mainHomeHref
+mainAboutHrefID = mainAboutHref
 mainResumeHrefID = mainResumeHref
 mainPortfolioHrefID = mainPortfolioHref
 mainContactHrefID = mainContactHref
+
+socialFb = Facebook
+socialFbHrefID = socialFbHref
+socialFbSpanID = socialFbSpan
+socialSkype = Skype
+socialSkypeHrefID = socialSkypeHref
+socialSkypeSpanID = socialSkypeSpan
+socialInsta = Instagram
+socialInstaHrefID = socialInstaHref
+socialInstaSpanID = socialInstaSpan
+socialTwitter = Twitter
+socialTwitterHrefID = socialTwitterHref
+socialTwitterSpanID = socialTwitterSpan
 
 #Main Footer
 copyRight = Copyright © 2016 Gutierrez, Jerald S.
@@ -26,12 +44,21 @@ mainEmail = gutierrez.jeralds@yahoo.com
 mainPhone = (+63)949-800-8471
 skypeID = Skype ID: gutierrez.jerald
 yourEmail = Enter your Email Address
+yourMessage = Enter your Message
+yourName = Enter your Name
+contactAsk = Ask me anything...
 
-#Profile Skills
-profileSkills_1 = HTML
-profileSkills_2 = CSS
-profileSkills_3 = JavaScript
-profileSkills_4 = Jquery
+#Home
+homeName = Gutierrez, Jerald S.
+homePosition = Web Developer - Front-End
+
+#About
+aboutTitle = About...
+aboutInfo = Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+aboutSkills_1 = HTML
+aboutSkills_2 = CSS
+aboutSkills_3 = JavaScript
+aboutSkills_4 = Jquery
 
 #Personal Information
 personalInfoTitle = Personal Information
@@ -87,7 +114,7 @@ of the teachers, employees and school computers laboratory
 
 #My Skills
 skillsTitle = My Skills
-skills_1 = ☺ Knowledgeable in Web developing such as: HTML, CSS, SASS, Angular JS, Bootstrap, JavaScript, PHP, HTML5, CSS3.
+skills_1 = ☺ Knowledgeable in Web developing such as: HTML, CSS, SASS, Angular JS, Bootstrap, JavaScript, JQuery, PHP, HTML5, CSS3.
 skills_2 = ☺ Knowledgeable in Play Framework, Source Tree, IntelliJ Idea processing
 skills_3 = ☺ Knowledgeable in reformatting windows operating system platforms
 skills_4 = ☺ Knowledgeable in computer troubleshooting

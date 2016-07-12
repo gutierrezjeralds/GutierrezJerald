@@ -2,8 +2,10 @@
 	.lg-hide {
 		display: none;
 	}
-	.secondMainMenu{
-	    display: none;
+	.wrapper-home{
+	    .home-footer{
+	        margin-left: 120px;
+	    }
 	}
 }
 
@@ -11,9 +13,52 @@
 	.md-hide {
 		display: none;
 	}
-	.secondMainMenu{
-	    display: none;
+	.main-menu{
+	    position: relative !important;
+        .main-menu-li{
+            display: inline-block;
+            margin-left: 20px;
+        }
 	}
+	.social-main-menu{
+        .social-menu-li{
+            display: none !important;
+        }
+	}
+    .wrapper-main{
+        margin-left: 0px !important;
+        .mainContact{
+            position: relative !important;
+            width: 94% !important;
+            max-width: 960px !important;
+            .mainSocialIcon{
+                display: inline-block !important;
+                a{
+                    img{
+                        position: static !important;
+                    }
+                }
+            }
+        }
+        .footerContent{
+            position: relative !important;
+            width: 94% !important;
+            max-width: 960px !important;
+            top: 0 !important;
+        }
+    }
+    .wrapper-home{
+        .home-img{
+            img{
+                display: block;
+                margin: auto;
+            }
+        }
+        .home-name{
+            margin-left: 0px !important;
+            text-align: center;
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -22,24 +67,52 @@
 	}
 	.main-menu{
 	    position: relative !important;
+        .main-menu-li{
+            display: inline-block;
+            margin-left: 20px;
+        }
 	}
-    .main-menu-li{
-        display: inline-block;
-        margin-left: 20px;
-    }
+	.social-main-menu{
+        .social-menu-li{
+            display: none !important;
+        }
+	}
     .wrapper-main{
         margin-left: 0px !important;
+        .mainContact{
+            position: relative !important;
+            width: 94% !important;
+            max-width: 960px !important;
+            .mainSocialIcon{
+                display: inline-block !important;
+                a{
+                    img{
+                        position: static !important;
+                    }
+                }
+            }
+        }
+        .footerContent{
+            position: relative !important;
+            width: 94% !important;
+            max-width: 960px !important;
+            top: 0 !important;
+        }
     }
-    .mainContact{
-        position: relative !important;
-        width: 94% !important;
-        max-width: 960px !important;
-    }
-    .footerContent{
-        position: relative !important;
-        width: 94% !important;
-        max-width: 960px !important;
-        top: 0 !important;
+    .wrapper-home{
+        .home-img{
+            img{
+                display: block;
+                margin: auto;
+            }
+        }
+        .home-name{
+            margin-left: 0px !important;
+            text-align: center;
+        }
+        .list-group-item{
+            padding: 10px 10px !important;
+        }
     }
 }
 

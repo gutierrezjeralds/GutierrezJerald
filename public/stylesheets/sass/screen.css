@@ -73,61 +73,133 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: none;
   }
 
-  /* line 5, ../../sass/sass/_grid.scss */
-  .secondMainMenu {
-    display: none;
+  /* line 6, ../../sass/sass/_grid.scss */
+  .wrapper-home .home-footer {
+    margin-left: 120px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 979px) {
-  /* line 11, ../../sass/sass/_grid.scss */
+  /* line 13, ../../sass/sass/_grid.scss */
   .md-hide {
     display: none;
   }
 
-  /* line 14, ../../sass/sass/_grid.scss */
-  .secondMainMenu {
-    display: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  /* line 20, ../../sass/sass/_grid.scss */
-  .sm-hide {
-    display: none;
-  }
-
-  /* line 23, ../../sass/sass/_grid.scss */
+  /* line 16, ../../sass/sass/_grid.scss */
   .main-menu {
     position: relative !important;
   }
-
-  /* line 26, ../../sass/sass/_grid.scss */
-  .main-menu-li {
+  /* line 18, ../../sass/sass/_grid.scss */
+  .main-menu .main-menu-li {
     display: inline-block;
     margin-left: 20px;
   }
 
-  /* line 30, ../../sass/sass/_grid.scss */
+  /* line 24, ../../sass/sass/_grid.scss */
+  .social-main-menu .social-menu-li {
+    display: none !important;
+  }
+
+  /* line 28, ../../sass/sass/_grid.scss */
   .wrapper-main {
     margin-left: 0px !important;
   }
-
-  /* line 33, ../../sass/sass/_grid.scss */
-  .mainContact {
+  /* line 30, ../../sass/sass/_grid.scss */
+  .wrapper-main .mainContact {
     position: relative !important;
     width: 94% !important;
     max-width: 960px !important;
   }
-
-  /* line 38, ../../sass/sass/_grid.scss */
-  .footerContent {
+  /* line 34, ../../sass/sass/_grid.scss */
+  .wrapper-main .mainContact .mainSocialIcon {
+    display: inline-block !important;
+  }
+  /* line 37, ../../sass/sass/_grid.scss */
+  .wrapper-main .mainContact .mainSocialIcon a img {
+    position: static !important;
+  }
+  /* line 43, ../../sass/sass/_grid.scss */
+  .wrapper-main .footerContent {
     position: relative !important;
     width: 94% !important;
     max-width: 960px !important;
     top: 0 !important;
   }
+
+  /* line 52, ../../sass/sass/_grid.scss */
+  .wrapper-home .home-img img {
+    display: block;
+    margin: auto;
+  }
+  /* line 57, ../../sass/sass/_grid.scss */
+  .wrapper-home .home-name {
+    margin-left: 0px !important;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 65, ../../sass/sass/_grid.scss */
+  .sm-hide {
+    display: none;
+  }
+
+  /* line 68, ../../sass/sass/_grid.scss */
+  .main-menu {
+    position: relative !important;
+  }
+  /* line 70, ../../sass/sass/_grid.scss */
+  .main-menu .main-menu-li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  /* line 76, ../../sass/sass/_grid.scss */
+  .social-main-menu .social-menu-li {
+    display: none !important;
+  }
+
+  /* line 80, ../../sass/sass/_grid.scss */
+  .wrapper-main {
+    margin-left: 0px !important;
+  }
+  /* line 82, ../../sass/sass/_grid.scss */
+  .wrapper-main .mainContact {
+    position: relative !important;
+    width: 94% !important;
+    max-width: 960px !important;
+  }
+  /* line 86, ../../sass/sass/_grid.scss */
+  .wrapper-main .mainContact .mainSocialIcon {
+    display: inline-block !important;
+  }
+  /* line 89, ../../sass/sass/_grid.scss */
+  .wrapper-main .mainContact .mainSocialIcon a img {
+    position: static !important;
+  }
+  /* line 95, ../../sass/sass/_grid.scss */
+  .wrapper-main .footerContent {
+    position: relative !important;
+    width: 94% !important;
+    max-width: 960px !important;
+    top: 0 !important;
+  }
+
+  /* line 104, ../../sass/sass/_grid.scss */
+  .wrapper-home .home-img img {
+    display: block;
+    margin: auto;
+  }
+  /* line 109, ../../sass/sass/_grid.scss */
+  .wrapper-home .home-name {
+    margin-left: 0px !important;
+    text-align: center;
+  }
+  /* line 113, ../../sass/sass/_grid.scss */
+  .wrapper-home .list-group-item {
+    padding: 10px 10px !important;
+  }
 }
 @media screen and (max-device-width: 480px) {
-  /* line 47, ../../sass/sass/_grid.scss */
+  /* line 120, ../../sass/sass/_grid.scss */
   .mb-hide {
     display: none;
   }
@@ -180,4 +252,62 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 28, ../../sass/sass/_common.scss */
 .bold {
   font-weight: 600;
+}
+
+/* line 31, ../../sass/sass/_common.scss */
+.box-shadow {
+  -webkit-box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+
+/* line 37, ../../sass/sass/_common.scss */
+.menu-item-grad-bg {
+  background: #55BDC9;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #55BDC9, #fff);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #55BDC9, #fff);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #55BDC9, #fff);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #55BDC9, #fff);
+  /* Standard syntax */
+}
+
+/* line 44, ../../sass/sass/_common.scss */
+.btn-primary {
+  background: #55BDC9 !important;
+  border: none !important;
+}
+
+/* line 48, ../../sass/sass/_common.scss */
+.btn-default {
+  background: #307bbb !important;
+  border: none !important;
+}
+/* line 51, ../../sass/sass/_common.scss */
+.btn-default:hover {
+  color: #fff !important;
+}
+
+/* line 55, ../../sass/sass/_common.scss */
+.form-control {
+  background: transparent !important;
+}
+
+/* line 58, ../../sass/sass/_common.scss */
+p {
+  color: #fff;
+}
+
+/* line 61, ../../sass/sass/_common.scss */
+span {
+  color: #fff;
+}
+
+/* line 64, ../../sass/sass/_common.scss */
+h2 {
+  color: #fff !important;
 }

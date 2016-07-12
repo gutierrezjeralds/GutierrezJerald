@@ -1,0 +1,46 @@
+.wrapper-home{
+    .home-content{
+        padding: 10px;
+        .home-body{
+            padding: 10px;
+            .home-img{
+                img{
+                    position: relative !important;
+                    width: 250px;
+                    height: 200px;
+                    z-index: 1;
+                }
+            }
+            .home-name{
+                font-family: 'Josefin Sans', sans-serif;
+                span{
+                    color: #000 !important;
+                }
+                .home-position-text{
+                    font-size: 20px;
+                }
+            }
+        }
+        .home-footer{
+            .list-group-item{
+                background: none !important;
+                border: none !important;
+                display: inline-block !important;
+                .home-menu-item{
+                    text-decoration: none;
+                    span{
+                        img{
+                            position: relative !important;
+                            width: 60px;
+                            height: 60px;
+                        }
+                        .homeMenuName{
+                            margin-top: 10px;
+                            color: #307bbb;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
