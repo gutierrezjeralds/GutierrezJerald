@@ -27,6 +27,12 @@ socialFbSpanID = socialFbSpan
 socialSkype = Skype
 socialSkypeHrefID = socialSkypeHref
 socialSkypeSpanID = socialSkypeSpan
+socialInsta = Instagram
+socialInstaHrefID = socialInstaHref
+socialInstaSpanID = socialInstaSpan
+socialTwitter = Twitter
+socialTwitterHrefID = socialTwitterHref
+socialTwitterSpanID = socialTwitterSpan
 
 #Main Footer
 copyRight = Copyright © 2016 Gutierrez, Jerald S.

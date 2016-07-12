@@ -106,10 +106,15 @@ header{
         width: 15%;
         max-width: 200px;
         .mainSocialIcon{
-            img{
-                position: relative !important;
-                width: 20px;
-                height: 20px;
+            a{
+                text-decoration: none;
+                padding-left: 5px;
+                img{
+                    position: relative !important;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50px;
+                }
                 &:hover{
                     opacity: .7;
                 }

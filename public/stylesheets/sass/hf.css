@@ -123,16 +123,22 @@ header .social-main-menu .social-menu-li .menu-item span .menu-item-name {
   max-width: 200px;
 }
 /* line 109, ../../sass/sass/hf.scss */
-.wrapper-main .mainContact .mainSocialIcon img {
+.wrapper-main .mainContact .mainSocialIcon a {
+  text-decoration: none;
+  padding-left: 5px;
+}
+/* line 112, ../../sass/sass/hf.scss */
+.wrapper-main .mainContact .mainSocialIcon a img {
   position: relative !important;
   width: 20px;
   height: 20px;
+  border-radius: 50px;
 }
-/* line 113, ../../sass/sass/hf.scss */
-.wrapper-main .mainContact .mainSocialIcon img:hover {
+/* line 118, ../../sass/sass/hf.scss */
+.wrapper-main .mainContact .mainSocialIcon a:hover {
   opacity: .7;
 }
-/* line 119, ../../sass/sass/hf.scss */
+/* line 124, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent {
   border-left: 1px solid grey;
   position: fixed;
@@ -140,15 +146,15 @@ header .social-main-menu .social-menu-li .menu-item span .menu-item-name {
   max-width: 200px;
   top: 580px;
 }
-/* line 125, ../../sass/sass/hf.scss */
+/* line 130, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent.aboutFooter {
   top: 420px;
 }
-/* line 128, ../../sass/sass/hf.scss */
+/* line 133, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent.contactFooter {
   top: 470px;
 }
-/* line 131, ../../sass/sass/hf.scss */
+/* line 136, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent.homeFooter {
   top: 460px;
 }

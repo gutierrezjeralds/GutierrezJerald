@@ -62,16 +62,30 @@
                     {
                         socialNav: "&{'socialFb'}",
                         socialNavUrl: "https://www.facebook.com/OnesixJerald.BossdOTsupErman",
-                        socialNavImg: "/public/images/social/fb-icon-menu.svg",
+                        socialNavImg: "/public/images/social/fb-icon.svg",
                         socialNavHrefID: "&{'socialFbHrefID'}",
                         socialNavSpanID: "&{'socialFbSpanID'}",
                     },
                     {
                         socialNav: "&{'skypeID'}",
                         socialNavUrl: "",
-                        socialNavImg: "/public/images/social/skype-icon-menu.svg",
+                        socialNavImg: "/public/images/social/skype-icon.svg",
                         socialNavHrefID: "&{'socialSkypeHrefID'}",
                         socialNavSpanID: "&{'socialSkypeSpanID'}",
+                    },
+                    {
+                        socialNav: "&{'socialInsta'}",
+                        socialNavUrl: "https://www.instagram.com/gutierrezjerald/?hl=en",
+                        socialNavImg: "/public/images/social/instagram-icon.svg",
+                        socialNavHrefID: "&{'socialInstaHrefID'}",
+                        socialNavSpanID: "&{'socialInstaSpanID'}",
+                    },
+                    {
+                        socialNav: "&{'socialTwitter'}",
+                        socialNavUrl: "https://twitter.com/SenaJerald",
+                        socialNavImg: "/public/images/social/twitter-icon.svg",
+                        socialNavHrefID: "&{'socialTwitterHrefID'}",
+                        socialNavSpanID: "&{'socialTwitterSpanID'}",
                     },
                 ];
             });
@@ -139,9 +153,17 @@
                     $('#socialSkypeHref').mouseover(function() {
                         $('#socialSkypeSpan').css("display","inline-block");
                     });
-                    $('#socialFbHref,#socialSkypeHref').mouseout(function() {
+                    $('#socialInstaHref').mouseover(function() {
+                        $('#socialInstaSpan').css("display","inline-block");
+                    });
+                    $('#socialTwitterHref').mouseover(function() {
+                        $('#socialTwitterSpan').css("display","inline-block");
+                    });
+                    $('#socialFbHref,#socialSkypeHref,#socialInstaHref,#socialTwitterHref').mouseout(function() {
                         $('#socialFbSpan').css("display","none");
                         $('#socialSkypeSpan').css("display","none");
+                        $('#socialInstaSpan').css("display","none");
+                        $('#socialTwitterSpan').css("display","none");
                     });
                     $('#footer').addClass("homeFooter");
                 }
@@ -205,6 +227,7 @@
                         </a>
                     </li>
                 </ul>
+                <!-- Home Page Nav Menu -->
                 <ul class="social-main-menu">
                     <li ng-repeat="x in socialMenu" class="social-menu-li">
                         <a ng-href="{{x.socialNavUrl}}" class="menu-item menu-item-bg hvr-bounce-to-right" id="{{x.socialNavHrefID}}">
@@ -215,6 +238,7 @@
                         </a>
                     </li>
                 </ul>
+                <!-- END -->
             </header>
 
             <div class="wrapper-main">
@@ -231,10 +255,9 @@
                                     <span>&{'mainPhone'}</span>
                                 </div>
                                 <div class="mainSocialIcon">
-                                    <span>
-                                        <img class="skype-icon" src="/public/images/social/skype-icon.svg" data-toggle="tooltip" data-placement="left" title="&{'skypeID'}" />
-                                        <a href="https://www.facebook.com/OnesixJerald.BossdOTsupErman">
-                                            <img class="fb-icon" src="/public/images/social/fb-icon.svg" />
+                                    <span ng-repeat="x in socialMenu">
+                                        <a href="{{x.socialNavUrl}}">
+                                            <img ng-src="{{x.socialNavImg}}" data-toggle="tooltip" data-placement="bottom" title="{{x.socialNav}}" />
                                         </a>
                                     </span>
                                 </div>
