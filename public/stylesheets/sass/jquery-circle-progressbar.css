@@ -1,0 +1,57 @@
+/* line 6, ../../sass/sass/jquery-circle-progressbar.scss */
+.progress-bar {
+  background-color: transparent;
+}
+/* line 11, ../../sass/sass/jquery-circle-progressbar.scss */
+.progress-bar div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+/* line 16, ../../sass/sass/jquery-circle-progressbar.scss */
+.progress-bar div span {
+  position: absolute;
+  font-family: Arial;
+  font-size: 25px;
+  line-height: 75px;
+  height: 75px;
+  width: 75px;
+  left: 12.5px;
+  top: 12.5px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: grey;
+  color: #000;
+}
+/* line 32, ../../sass/sass/jquery-circle-progressbar.scss */
+.progress-bar .background {
+  background-color: #b3cef6;
+}
+/* line 35, ../../sass/sass/jquery-circle-progressbar.scss */
+.progress-bar .rotate {
+  clip: rect(0 50px 100px 0);
+  background-color: #55BDC9;
+}
+/* line 42, ../../sass/sass/jquery-circle-progressbar.scss */
+.progress-bar .left {
+  clip: rect(0 50px 100px 0);
+  opacity: 1;
+  background-color: #b3cef6;
+}
+/* line 48, ../../sass/sass/jquery-circle-progressbar.scss */
+.progress-bar .right {
+  clip: rect(0 50px 100px 0);
+  transform: rotate(180deg);
+  opacity: 0;
+  background-color: #55BDC9;
+}
+
+@keyframes toggle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

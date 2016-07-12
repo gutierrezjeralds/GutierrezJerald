@@ -33,6 +33,11 @@
             max-width: 960px !important;
             .mainSocialIcon{
                 display: inline-block !important;
+                a{
+                    img{
+                        position: static !important;
+                    }
+                }
             }
         }
         .footerContent{
@@ -80,6 +85,11 @@
             max-width: 960px !important;
             .mainSocialIcon{
                 display: inline-block !important;
+                a{
+                    img{
+                        position: static !important;
+                    }
+                }
             }
         }
         .footerContent{

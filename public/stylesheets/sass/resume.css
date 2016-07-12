@@ -15,7 +15,7 @@
   position: relative !important;
   width: 50px;
   height: 50px;
-  border: 2px solid !important;
+  border: 2px solid grey !important;
   border-radius: 50px;
   padding: 5px;
 }
@@ -28,11 +28,16 @@
   -webkit-transition: none !important;
   transition: none !important;
 }
-/* line 26, ../../sass/sass/resume.scss */
+/* line 24, ../../sass/sass/resume.scss */
+.wrapper-resume .resume-body .resume-content .progress {
+  background-color: transparent !important;
+  border: 1px solid grey !important;
+}
+/* line 30, ../../sass/sass/resume.scss */
 .wrapper-resume .resume-body .personal-info td:first-child {
   width: 30%;
 }
-/* line 31, ../../sass/sass/resume.scss */
+/* line 35, ../../sass/sass/resume.scss */
 .wrapper-resume .resume-body .seminars td:first-child {
   width: 20%;
 }

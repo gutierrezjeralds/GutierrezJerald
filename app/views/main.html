@@ -91,11 +91,51 @@
             });
         </script>
         <script type="text/javascript">
+            <!-- Disable ctrl key -->
+            function disableCtrlKeyCombination(e){
+                //list all CTRL + key combinations you want to disable
+                var forbiddenKeys = new Array('a', 'c' , 'w', 'u' , 's' , "false");
+                var key;
+                var isCtrl;
+                if(window.event){
+                    key = window.event.keyCode;     //IE
+                    if(window.event.ctrlKey)
+                        isCtrl = true;
+                        else
+                        isCtrl = false;
+                    }else{
+                        key = e.which;     //firefox
+                        if(e.ctrlKey)
+                            isCtrl = true;
+                            else
+                            isCtrl = false;
+                        }
+                        //if ctrl is pressed check if other key is in forbidenKeys array
+                        if(isCtrl){
+                            for(i=0; i<forbiddenKeys.length; i++)
+                        {
+                        //case-insensitive comparation
+                        if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()){
+                            return false;
+                        }
+                    }
+                }return true;
+            }
+            <!-- END -->
             $(document).ready(function(){
-
+                <!-- Disable ctrl shift key and right click -->
+                $(window).keydown(function(event){
+                    if(event.keyCode==123){
+                        return false;
+                    }
+                    else if (event.ctrlKey && event.shiftKey && event.keyCode==73){
+                             return false;
+                    }
+                });
                 $(window).on("contextmenu",function(e){
                    return false;
                 });
+                <!-- END -->
 
                 $('[data-toggle="tooltip"]').tooltip();
 
@@ -165,20 +205,11 @@
                         $('#socialInstaSpan').css("display","none");
                         $('#socialTwitterSpan').css("display","none");
                     });
+                    $('body').removeClass("body-bg");
                     $('#footer').addClass("homeFooter");
+                    $('#mainContactBody').addClass("home-font-color");
                 }
                 //End of script
-
-                $(document).keyup(function(evtobj) {
-                    if (!(evtobj.altKey || evtobj.ctrlKey || evtobj.shiftKey)){
-                        if (evtobj.keyCode == 16){
-                            return false;
-                        }
-                        if (evtobj.keyCode == 17){
-                            return false;
-                        }
-                    }
-                });
 
                 <!-- Slide Background image -->
                 var image1 = "/public/images/background/background_1.jpg";
@@ -213,7 +244,7 @@
         </script>
         #{get 'moreScripts' /}
     </head>
-    <body ng-app="website" ng-controller="dataCtrl">
+    <body class="body-bg" onkeypress="return disableCtrlKeyCombination(event);" onkeydown="return disableCtrlKeyCombination(event);" ng-app="website" ng-controller="dataCtrl">
         <div class="push25"></div>
         <div class="wrapper page960">
             <header>
@@ -247,7 +278,7 @@
                         <div class="col-md-9">
                             #{doLayout /}
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3" id="mainContactBody">
                             <div class="mainContact text-right">
                                 <div class="mainAddress">
                                     <span>&{'mainAddress'}, &{'mainPostalCode'}</span><br>

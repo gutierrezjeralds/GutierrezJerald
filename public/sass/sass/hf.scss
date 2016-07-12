@@ -7,6 +7,13 @@ body {
     background-image: url("/public/images/background/bgGreyDots.jpg");
     font-family: "Malgun Gothic", Helvetica, Arial;
 }
+.body-bg{
+    background: url("/public/images/background/body-bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .page960 {
     width: 94%;
     max-width: 960px;
@@ -106,6 +113,7 @@ header{
         width: 15%;
         max-width: 200px;
         .mainSocialIcon{
+            padding-top: 5px;
             a{
                 text-decoration: none;
                 padding-left: 5px;
@@ -113,10 +121,11 @@ header{
                     position: relative !important;
                     width: 20px;
                     height: 20px;
-                    border-radius: 50px;
-                }
-                &:hover{
-                    opacity: .7;
+                    background: #55BDC9;
+                    border-radius: 2px;
+                    &:hover{
+                        background: #307bbb;
+                    }
                 }
             }
         }
@@ -135,6 +144,11 @@ header{
         }
         &.homeFooter{
             top: 460px;
+        }
+    }
+    .home-font-color{
+        span{
+            color: #000 !important;
         }
     }
 }
