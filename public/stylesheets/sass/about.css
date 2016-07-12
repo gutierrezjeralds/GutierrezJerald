@@ -22,3 +22,11 @@
   border: none !important;
   display: inline-block !important;
 }
+/* line 24, ../../sass/sass/about.scss */
+.wrapper-about .about-content .about-footer .list-group-item .c100 {
+  background-color: transparent;
+}
+/* line 26, ../../sass/sass/about.scss */
+.wrapper-about .about-content .about-footer .list-group-item .c100:after {
+  background-color: transparent;
+}
