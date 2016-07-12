@@ -1,0 +1,14 @@
+.wrapper-portfolio{
+    .portfolio-body-content{
+        .content{
+            width: 175px;
+            height: 170px;
+            border: 1px solid grey;
+        }
+        .list-group-item{
+            background: none !important;
+            border: none !important;
+            display: inline-block !important;
+        }
+    }
+}

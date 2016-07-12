@@ -60,6 +60,9 @@ aboutSkills_2 = CSS
 aboutSkills_3 = JavaScript
 aboutSkills_4 = Jquery
 
+#Portfolio
+portfolioTitle = My Portfolio...
+
 #Personal Information
 personalInfoTitle = Personal Information
 personalInfoGender_1 = Gender

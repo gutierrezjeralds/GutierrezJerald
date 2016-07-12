@@ -172,7 +172,11 @@ header .social-main-menu .social-menu-li .menu-item span .menu-item-name {
 .wrapper-main .footerContent.homeFooter {
   top: 460px;
 }
-/* line 150, ../../sass/sass/hf.scss */
+/* line 148, ../../sass/sass/hf.scss */
+.wrapper-main .footerContent.portfolioFooter {
+  top: 500px;
+}
+/* line 153, ../../sass/sass/hf.scss */
 .wrapper-main .home-font-color span {
   color: #000 !important;
 }

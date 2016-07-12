@@ -1,8 +1,78 @@
 #{extends 'main.html' /}
 #{set title:'Gutierrez | Portfolio' /}
 
+#{set 'moreStyles'}
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/sass/portfolio.css">
+#{/}
+
 #{get 'moreScripts'}
 <script>
-
+website.controller('portfolioCtrl', function($scope) {
+    $scope.portfolioList = [
+        {
+            portfolioListTitle: "&{'portfolioListTitle_1'}",
+            portfolioListHrefID: "",
+            portfolioListImg: "",
+        },
+        {
+            portfolioListTitle: "&{'portfolioListTitle_1'}",
+            portfolioListHrefID: "",
+            portfolioListImg: "",
+        },
+        {
+            portfolioListTitle: "&{'portfolioListTitle_1'}",
+            portfolioListHrefID: "",
+            portfolioListImg: "",
+        },
+        {
+            portfolioListTitle: "&{'portfolioListTitle_1'}",
+            portfolioListHrefID: "",
+            portfolioListImg: "",
+        },
+        {
+            portfolioListTitle: "&{'portfolioListTitle_1'}",
+            portfolioListHrefID: "",
+            portfolioListImg: "",
+        },
+        {
+            portfolioListTitle: "&{'portfolioListTitle_1'}",
+            portfolioListHrefID: "",
+            portfolioListImg: "",
+        },
+    ];
+});
+</script>
+<script>
+$(document).ready(function(){
+    $(".progress-bar").loading();
+});
 </script>
 #{/}
+
+<div class="wrapper-portfolio" ng-controller="portfolioCtrl">
+    <div class="portfolio-content">
+        <div class="portfolio-header">
+            <div class="portfolio-title box-shadow col-md-12">
+                <h2>
+                    &{'portfolioTitle'}
+                </h2>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="push25"></div>
+        <div class="portfolio-body-content box-shadow col-md-12">
+            <div class="push25"></div>
+            <ul class="list-group portfolio-list col-sm-offset-1 col-md-offset-2 col-xs-offset-2">
+                <li class="list-group-item" ng-repeat="x in portfolioList">
+                    <div class="content">
+                        <a href="">
+                            <img ng-src="" />
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="push25"></div>
+    </div>
+</div>
