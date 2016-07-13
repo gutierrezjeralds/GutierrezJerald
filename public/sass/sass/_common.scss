@@ -54,29 +54,32 @@
 }
 .form-control{
     background: transparent !important;
-    color: #fff !important;
+    color: #000 !important;
+    text-shadow: 1px 1px 1px #fff;
     border: 1px solid grey;
 }
 input[type=text]::-webkit-input-placeholder {
-  color: #fff;
+  color: #000;
 }
 input[type=text]::-moz-placeholder { /* Firefox 19+ */
-  color: pink;
+  color: #000;
 }
 input[type=text]:-ms-input-placeholder { /* IE 10+ */
-  color: pink;
+  color: #000;
 }
 input[type=text]:-moz-placeholder { /* Firefox 18- */
-  color: pink;
+  color: #000;
 }
 p{
-    color: #fff;
+    color: #000;
+    text-shadow: 1px 1px 1px #fff;
 }
 span{
-    color: #fff;
+    color: #000;
+    text-shadow: 1px 1px 1px #fff;
 }
 h2{
-    color: #fff !important;
+    color: #000 !important;
 }
 .list-group-item{
     background: none !important;

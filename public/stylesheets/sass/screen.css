@@ -300,49 +300,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 55, ../../sass/sass/_common.scss */
 .form-control {
   background: transparent !important;
-  color: #fff !important;
+  color: #000 !important;
+  text-shadow: 1px 1px 1px #fff;
   border: 1px solid grey;
 }
 
-/* line 60, ../../sass/sass/_common.scss */
+/* line 61, ../../sass/sass/_common.scss */
 input[type=text]::-webkit-input-placeholder {
-  color: #fff;
+  color: #000;
 }
 
-/* line 63, ../../sass/sass/_common.scss */
+/* line 64, ../../sass/sass/_common.scss */
 input[type=text]::-moz-placeholder {
   /* Firefox 19+ */
-  color: pink;
+  color: #000;
 }
 
-/* line 66, ../../sass/sass/_common.scss */
+/* line 67, ../../sass/sass/_common.scss */
 input[type=text]:-ms-input-placeholder {
   /* IE 10+ */
-  color: pink;
+  color: #000;
 }
 
-/* line 69, ../../sass/sass/_common.scss */
+/* line 70, ../../sass/sass/_common.scss */
 input[type=text]:-moz-placeholder {
   /* Firefox 18- */
-  color: pink;
+  color: #000;
 }
 
-/* line 72, ../../sass/sass/_common.scss */
+/* line 73, ../../sass/sass/_common.scss */
 p {
-  color: #fff;
+  color: #000;
+  text-shadow: 1px 1px 1px #fff;
 }
 
-/* line 75, ../../sass/sass/_common.scss */
+/* line 77, ../../sass/sass/_common.scss */
 span {
-  color: #fff;
-}
-
-/* line 78, ../../sass/sass/_common.scss */
-h2 {
-  color: #fff !important;
+  color: #000;
+  text-shadow: 1px 1px 1px #fff;
 }
 
 /* line 81, ../../sass/sass/_common.scss */
+h2 {
+  color: #000 !important;
+}
+
+/* line 84, ../../sass/sass/_common.scss */
 .list-group-item {
   background: none !important;
   border: none !important;
