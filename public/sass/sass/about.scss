@@ -17,15 +17,10 @@
             }
         }
         .about-footer{
-            .list-group-item{
-                background: none !important;
-                border: none !important;
-                display: inline-block !important;
-                .c100{
+            .c100{
+                background-color: transparent;
+                &:after{
                     background-color: transparent;
-                    &:after{
-                        background-color: transparent;
-                    }
                 }
             }
         }

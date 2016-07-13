@@ -38,6 +38,10 @@
   width: 30%;
 }
 /* line 35, ../../sass/sass/resume.scss */
+.wrapper-resume .resume-body .my-skills .mySkillsList {
+  width: 50%;
+}
+/* line 40, ../../sass/sass/resume.scss */
 .wrapper-resume .resume-body .seminars td:first-child {
   width: 20%;
 }

@@ -8,7 +8,7 @@ body {
     font-family: "Malgun Gothic", Helvetica, Arial;
 }
 .body-bg{
-    background: url("/public/images/background/body-bg.jpg") no-repeat center center fixed;
+    background: url("/public/images/background/background_4.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -34,9 +34,10 @@ header{
     .main-menu{
         position: fixed;
         margin-top: 40px;
+        margin-left: -10px;
         z-index: 1;
         .main-menu-li{
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             .menu-item{
                 text-decoration: none;
                 padding: 10px;
@@ -69,10 +70,11 @@ header{
         position: fixed;
         margin-top: 40px;
         z-index: 2;
+        margin-left: -10px;
         .social-menu-li{
             display: none;
             cursor: pointer;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             .menu-item{
                 text-decoration: none;
                 padding: 10px;
@@ -104,9 +106,6 @@ header{
     height: auto;
     padding: 10px;
     margin-left: 40px;
-    -webkit-box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.75);
     .mainContact{
         border-left: 1px solid grey;
         position: fixed;

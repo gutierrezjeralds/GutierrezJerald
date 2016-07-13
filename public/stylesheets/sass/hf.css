@@ -13,7 +13,7 @@ body {
 
 /* line 10, ../../sass/sass/hf.scss */
 .body-bg {
-  background: url("/public/images/background/body-bg.jpg") no-repeat center center fixed;
+  background: url("/public/images/background/background_4.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -46,72 +46,74 @@ body {
 header .main-menu {
   position: fixed;
   margin-top: 40px;
+  margin-left: -10px;
   z-index: 1;
 }
-/* line 38, ../../sass/sass/hf.scss */
+/* line 39, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
-/* line 40, ../../sass/sass/hf.scss */
+/* line 41, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item {
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
 }
-/* line 44, ../../sass/sass/hf.scss */
+/* line 45, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item.menu-item-bg {
   background: #55BDC9;
 }
-/* line 48, ../../sass/sass/hf.scss */
+/* line 49, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item span img {
   position: relative !important;
   width: 20px;
   height: 20px;
 }
-/* line 53, ../../sass/sass/hf.scss */
+/* line 54, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item span .menu-item-name {
   padding-left: 8px;
   color: #000;
 }
-/* line 60, ../../sass/sass/hf.scss */
+/* line 61, ../../sass/sass/hf.scss */
 header .main-menu .main-menu-li .menu-item:hover span .menu-item-name {
   color: #fff;
 }
-/* line 68, ../../sass/sass/hf.scss */
+/* line 69, ../../sass/sass/hf.scss */
 header .social-main-menu {
   position: fixed;
   margin-top: 40px;
   z-index: 2;
+  margin-left: -10px;
 }
-/* line 72, ../../sass/sass/hf.scss */
+/* line 74, ../../sass/sass/hf.scss */
 header .social-main-menu .social-menu-li {
   display: none;
   cursor: pointer;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
-/* line 76, ../../sass/sass/hf.scss */
+/* line 78, ../../sass/sass/hf.scss */
 header .social-main-menu .social-menu-li .menu-item {
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
 }
-/* line 80, ../../sass/sass/hf.scss */
+/* line 82, ../../sass/sass/hf.scss */
 header .social-main-menu .social-menu-li .menu-item.menu-item-bg {
   background: #55BDC9;
 }
-/* line 84, ../../sass/sass/hf.scss */
+/* line 86, ../../sass/sass/hf.scss */
 header .social-main-menu .social-menu-li .menu-item span img {
   position: relative !important;
   width: 20px;
   height: 20px;
 }
-/* line 89, ../../sass/sass/hf.scss */
+/* line 91, ../../sass/sass/hf.scss */
 header .social-main-menu .social-menu-li .menu-item span .menu-item-name {
   display: none;
   padding-left: 8px;
 }
 
-/* line 99, ../../sass/sass/hf.scss */
+/* line 101, ../../sass/sass/hf.scss */
 .wrapper-main {
   width: 100%;
   max-width: 920px;
@@ -120,27 +122,24 @@ header .social-main-menu .social-menu-li .menu-item span .menu-item-name {
   height: auto;
   padding: 10px;
   margin-left: 40px;
-  -webkit-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.75);
 }
-/* line 110, ../../sass/sass/hf.scss */
+/* line 109, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact {
   border-left: 1px solid grey;
   position: fixed;
   width: 15%;
   max-width: 200px;
 }
-/* line 115, ../../sass/sass/hf.scss */
+/* line 114, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact .mainSocialIcon {
   padding-top: 5px;
 }
-/* line 117, ../../sass/sass/hf.scss */
+/* line 116, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact .mainSocialIcon a {
   text-decoration: none;
   padding-left: 5px;
 }
-/* line 120, ../../sass/sass/hf.scss */
+/* line 119, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact .mainSocialIcon a img {
   position: relative !important;
   width: 20px;
@@ -148,11 +147,11 @@ header .social-main-menu .social-menu-li .menu-item span .menu-item-name {
   background: #55BDC9;
   border-radius: 2px;
 }
-/* line 126, ../../sass/sass/hf.scss */
+/* line 125, ../../sass/sass/hf.scss */
 .wrapper-main .mainContact .mainSocialIcon a img:hover {
   background: #307bbb;
 }
-/* line 133, ../../sass/sass/hf.scss */
+/* line 132, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent {
   border-left: 1px solid grey;
   position: fixed;
@@ -160,23 +159,23 @@ header .social-main-menu .social-menu-li .menu-item span .menu-item-name {
   max-width: 200px;
   top: 580px;
 }
-/* line 139, ../../sass/sass/hf.scss */
+/* line 138, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent.aboutFooter {
   top: 420px;
 }
-/* line 142, ../../sass/sass/hf.scss */
+/* line 141, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent.contactFooter {
   top: 470px;
 }
-/* line 145, ../../sass/sass/hf.scss */
+/* line 144, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent.homeFooter {
   top: 460px;
 }
-/* line 148, ../../sass/sass/hf.scss */
+/* line 147, ../../sass/sass/hf.scss */
 .wrapper-main .footerContent.portfolioFooter {
   top: 500px;
 }
-/* line 153, ../../sass/sass/hf.scss */
+/* line 152, ../../sass/sass/hf.scss */
 .wrapper-main .home-font-color span {
   color: #000 !important;
 }

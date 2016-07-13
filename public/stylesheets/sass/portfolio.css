@@ -4,9 +4,3 @@
   height: 170px;
   border: 1px solid grey;
 }
-/* line 8, ../../sass/sass/portfolio.scss */
-.wrapper-portfolio .portfolio-body-content .list-group-item {
-  background: none !important;
-  border: none !important;
-  display: inline-block !important;
-}

@@ -91,47 +91,34 @@
             });
         </script>
         <script type="text/javascript">
-            <!-- Disable ctrl key -->
-            function disableCtrlKeyCombination(e){
-                //list all CTRL + key combinations you want to disable
-                var forbiddenKeys = new Array('a', 'c' , 'w', 'u' , 's' , "false");
-                var key;
-                var isCtrl;
-                if(window.event){
-                    key = window.event.keyCode;     //IE
-                    if(window.event.ctrlKey)
-                        isCtrl = true;
-                        else
-                        isCtrl = false;
-                    }else{
-                        key = e.which;     //firefox
-                        if(e.ctrlKey)
-                            isCtrl = true;
-                            else
-                            isCtrl = false;
-                        }
-                        //if ctrl is pressed check if other key is in forbidenKeys array
-                        if(isCtrl){
-                            for(i=0; i<forbiddenKeys.length; i++)
-                        {
-                        //case-insensitive comparation
-                        if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()){
-                            return false;
-                        }
-                    }
-                }return true;
-            }
-            <!-- END -->
             $(document).ready(function(){
                 <!-- Disable ctrl shift key and right click -->
-                $(window).keydown(function(event){
-                    if(event.keyCode==123){
+                window.onkeydown = function(e) {
+                    if(event.keyCode == 123) {
                         return false;
                     }
-                    else if (event.ctrlKey && event.shiftKey && event.keyCode==73){
-                             return false;
+                    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                        return false;
                     }
-                });
+                    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+                        return false;
+                    }
+                    if(e.metaKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+                        return false;
+                    }
+                    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                        return false;
+                    }
+                    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                        return false;
+                    }
+                    if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)){
+                        return false;
+                    }
+                    if(e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)){
+                        return false;
+                    }
+                }
                 $(window).on("contextmenu",function(e){
                    return false;
                 });
@@ -245,13 +232,13 @@
         </script>
         #{get 'moreScripts' /}
     </head>
-    <body class="body-bg" onkeypress="return disableCtrlKeyCombination(event);" onkeydown="return disableCtrlKeyCombination(event);" ng-app="website" ng-controller="dataCtrl">
+    <body class="body-bg" ng-app="website" ng-controller="dataCtrl">
         <div class="push25"></div>
         <div class="wrapper page960">
             <header>
                 <ul class="main-menu">
                     <li ng-repeat="x in mainMenu" class="main-menu-li" id="li-{{x.mainNavSpanID}}">
-                        <a ng-href="{{x.mainNavUrl}}" class="menu-item menu-item-bg hvr-bounce-to-right" id="{{x.mainNavHrefID}}" data-toggle="tooltip" data-placement="right" title="{{x.mainNav}}">
+                        <a ng-href="{{x.mainNavUrl}}" class="menu-item menu-item-bg hvr-bounce-to-right box-shadow" id="{{x.mainNavHrefID}}" data-toggle="tooltip" data-placement="right" title="{{x.mainNav}}">
                             <span>
                                 <img ng-src="{{x.mainNavImg}}" />
                                 <span class="menu-item-name sm-hide" id="{{x.mainNavSpanID}}">{{x.mainNav}}</span>
@@ -262,7 +249,7 @@
                 <!-- Home Page Nav Menu -->
                 <ul class="social-main-menu">
                     <li ng-repeat="x in socialMenu" class="social-menu-li">
-                        <a ng-href="{{x.socialNavUrl}}" class="menu-item menu-item-bg hvr-bounce-to-right" id="{{x.socialNavHrefID}}">
+                        <a ng-href="{{x.socialNavUrl}}" class="menu-item menu-item-bg hvr-bounce-to-right box-shadow" id="{{x.socialNavHrefID}}">
                             <span>
                                 <img ng-src="{{x.socialNavImg}}" />
                                 <span class="menu-item-name sm-hide" id="{{x.socialNavSpanID}}">{{x.socialNav}}</span>
@@ -273,7 +260,7 @@
                 <!-- END -->
             </header>
 
-            <div class="wrapper-main">
+            <div class="wrapper-main box-shadow">
                 <div class="cointaner">
                     <div class="row">
                         <div class="col-md-9">
@@ -289,7 +276,7 @@
                                 <div class="mainSocialIcon">
                                     <span ng-repeat="x in socialMenu">
                                         <a href="{{x.socialNavUrl}}">
-                                            <img ng-src="{{x.socialNavImg}}" data-toggle="tooltip" data-placement="bottom" title="{{x.socialNav}}" />
+                                            <img ng-src="{{x.socialNavImg}}" class="box-shadow" data-toggle="tooltip" data-placement="bottom" title="{{x.socialNav}}" />
                                         </a>
                                     </span>
                                 </div>
