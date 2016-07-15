@@ -16,6 +16,7 @@
 
         <script type="text/javascript" src="/public/javascripts/angular.min.js"></script>
         <script type="text/javascript" src="/public/javascripts/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="/public/javascripts/jquery-ui-1.11.2.js"></script>
         <script src="/public/bootstrap/js/bootstrap.min.js"></script>
         <script src="/public/bootstrap/js/bootstrap-select.js"></script>
         <script>
@@ -52,7 +53,7 @@
                     },
                     {
                         mainNav: "&{'mainContact'}",
-                        mainNavUrl: "/Contact",
+                        mainNavUrl: "",
                         mainNavImg: "/public/images/menu/contact-menu.svg",
                         mainNavSpanID: "&{'mainContactSpanID'}",
                         mainNavHrefID: "&{'mainContactHrefID'}",
@@ -126,6 +127,22 @@
 
                 $('[data-toggle="tooltip"]').tooltip();
 
+                $('#mainContactHref').click(function(){
+                    $('#contactModal').modal();
+                });
+                $('#downloadModal').click(function(){
+                    $('#downloadModalDisplay').modal();
+                });
+                $('#download-modal-no').click(function(){
+                    $('#contactModal').modal();
+                });
+                $('#contactModal').draggable({
+                    handle: ".modal-body"
+                });
+                $('#downloadModalDisplay').draggable({
+                    handle: ".modal-body"
+                });
+
                 var url = document.location.toString();
                 // Change hash for page-reload
 
@@ -134,40 +151,29 @@
                 var menuResume = url.substr(url.search("Resume"),10);
                 var menuPortfolio = url.substr(url.search("Portfolio"),10);
                 var menuContact = url.substr(url.search("Contact"),10);
+
                 if(menuAbout == ("About")){
-                    $('#mainHomeSpan').css("display","none");
-                    $('#mainResumeSpan').css("display","none");
-                    $('#mainPortfolioSpan').css("display","none");
-                    $('#mainContactSpan').css("display","none");
+                    $('#mainAboutSpan').addClass("aboutMenuNav");
                     $('#mainAboutHref').tooltip('disable');
-                    $('#footer').addClass("aboutFooter");
                     $('#mainAboutHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
+                    $('#footer').addClass("aboutFooter");
                 }
                 else if(menuResume == ("Resume")){
-                    $('#mainAboutSpan').css("display","none");
-                    $('#mainHomeSpan').css("display","none");
-                    $('#mainPortfolioSpan').css("display","none");
-                    $('#mainContactSpan').css("display","none");
-                    $('#mainResumeHref').tooltip('disable');
+                    $('#mainResumeSpan').addClass("resumeMenuNav");
                     $('#mainResumeHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
+                    $('#mainResumeHref').tooltip('disable');
                 }
                 else if(menuPortfolio == ("Portfolio")){
-                    $('#mainAboutSpan').css("display","none");
-                    $('#mainHomeSpan').css("display","none");
-                    $('#mainResumeSpan').css("display","none");
-                    $('#mainContactSpan').css("display","none");
+                    $('#mainPortfolioSpan').addClass("portfolioMenuNav");
                     $('#mainPortfolioHref').tooltip('disable');
-                    $('#footer').addClass("portfolioFooter");
                     $('#mainPortfolioHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
+                    $('#footer').addClass("portfolioFooter");
                 }
                 else if(menuContact == ("Contact")){
-                    $('#mainAboutSpan').css("display","none");
-                    $('#mainHomeSpan').css("display","none");
-                    $('#mainResumeSpan').css("display","none");
-                    $('#mainPortfolioSpan').css("display","none");
+                    $('#mainContactSpan').addClass("contactMenuNav");
                     $('#mainContactHref').tooltip('disable');
-                    $('#footer').addClass("contactFooter");
                     $('#mainContactHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
+                    $('#footer').addClass("contactFooter");
                 }
                 else{
                     $('.main-menu-li').css("display","none");
@@ -175,27 +181,8 @@
                     $('.social-menu-li').css("display","block");
                     $('body').addClass("slideshow");
                     $('.wrapper-main').css("background-image","url('/public/images/background/bgGreyDots.jpg')");
-                    $('#socialFbHref').mouseover(function() {
-                        $('#socialFbSpan').css("display","inline-block");
-                    });
-                    $('#socialSkypeHref').mouseover(function() {
-                        $('#socialSkypeSpan').css("display","inline-block");
-                    });
-                    $('#socialInstaHref').mouseover(function() {
-                        $('#socialInstaSpan').css("display","inline-block");
-                    });
-                    $('#socialTwitterHref').mouseover(function() {
-                        $('#socialTwitterSpan').css("display","inline-block");
-                    });
-                    $('#socialFbHref,#socialSkypeHref,#socialInstaHref,#socialTwitterHref').mouseout(function() {
-                        $('#socialFbSpan').css("display","none");
-                        $('#socialSkypeSpan').css("display","none");
-                        $('#socialInstaSpan').css("display","none");
-                        $('#socialTwitterSpan').css("display","none");
-                    });
                     $('body').removeClass("body-bg");
                     $('#footer').addClass("homeFooter");
-                    $('#mainContactBody').addClass("home-font-color");
                 }
                 //End of script
 
@@ -293,5 +280,57 @@
             </div>
         </div>
         <div class="push25"></div>
+        <!-- Contact Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="contact-title box-shadow col-md-12">
+                            <h2>
+                                &{'contactAsk'}
+                            </h2>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="push25"></div>
+                        <form class="form-group box-shadow col-md-12">
+                            <div class="push25"></div>
+                            <div class="contact-input-text">
+                                <input type="text" class="form-control col-md-6 pull-left" placeholder="&{'yourEmail'}"/>
+                                <input type="text" class="form-control col-md-6 pull-right" placeholder="&{'yourName'}"/>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="push25"></div>
+                            <div class="contact-text-area">
+                                <textarea class="form-control" rows="10" placeholder="&{'yourMessage'}"></textarea>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="push25"></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="btn btn-primary hvr-shutter-out-horizontal pull-right">Send</a>
+                        <a href="" class="btn btn-default hvr-shutter-in-horizontal pull-right" id="downloadModal" data-dismiss="modal">Download My CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
+        <!-- Download Modal -->
+        <div class="modal fade" id="downloadModalDisplay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3>
+                            &{'contactDownload'}
+                        </h3>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="btn btn-default hvr-shutter-in-horizontal pull-right" id="download-modal-no" data-dismiss="modal">No</a>
+                        <a download="Resume-Jerald-Update.pdf" href="public/resume-file/Resume-Jerald-Update.pdf" class="btn btn-primary hvr-shutter-out-horizontal pull-right" onclick="location.reload()">Yes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
     </body>
 </html>

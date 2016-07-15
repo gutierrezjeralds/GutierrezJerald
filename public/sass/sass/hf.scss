@@ -38,6 +38,7 @@ header{
         z-index: 1;
         .main-menu-li{
             margin-bottom: 10px;
+            cursor: pointer;
             .menu-item{
                 text-decoration: none;
                 padding: 10px;
@@ -52,14 +53,28 @@ header{
                         height: 20px;
                     }
                     .menu-item-name{
+                        display: none;
                         padding-left: 8px;
                         color: #000;
+                        &.aboutMenuNav{
+                            display: inline-block;
+                        }
+                        &.resumeMenuNav{
+                            display: inline-block;
+                        }
+                        &.portfolioMenuNav{
+                            display: inline-block;
+                        }
+                        &.contactMenuNav{
+                            display: inline-block;
+                        }
                     }
                 }
                 &:hover{
                     span{
                         .menu-item-name{
                             color: #fff;
+                            text-shadow: none;
                         }
                     }
                 }
@@ -82,6 +97,26 @@ header{
                 &.menu-item-bg{
                     background: #55BDC9;
                 }
+                &#socialFbHref:hover{
+                    #socialFbSpan{
+                        display: inline-block;
+                    }
+                }
+                &#socialSkypeHref:hover{
+                    #socialSkypeSpan{
+                        display: inline-block;
+                    }
+                }
+                &#socialInstaHref:hover{
+                    #socialInstaSpan{
+                        display: inline-block;
+                    }
+                }
+                &#socialTwitterHref:hover{
+                    #socialTwitterSpan{
+                        display: inline-block;
+                    }
+                }
                 span{
                     img{
                         position: relative !important;
@@ -91,6 +126,14 @@ header{
                     .menu-item-name{
                         display: none;
                         padding-left: 8px;
+                    }
+                }
+                &:hover{
+                    span{
+                        .menu-item-name{
+                            color: #fff;
+                            text-shadow: none;
+                        }
                     }
                 }
             }
@@ -148,9 +191,32 @@ header{
             top: 500px;
         }
     }
-    .home-font-color{
-        span{
-            color: #000 !important;
+}
+.modal{
+    &#contactModal{
+        .contact-input-text{
+            input[type=text]{
+                width: 48%;
+            }
+        }
+        .contact-text-area{
+            textarea{
+                resize: none;
+            }
+        }
+    }
+    .modal-content{
+        background-image: url("/public/images/background/bgGreyDots.jpg");
+        padding: 10px;
+        .modal-header{
+            border: none;
+            padding-bottom: 0px;
+        }
+        .modal-footer{
+            border: none;
+            a{
+                margin-left: 10px;
+            }
         }
     }
 }

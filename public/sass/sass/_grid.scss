@@ -68,7 +68,7 @@
 
 @media screen and (max-width: 767px) {
 	.sm-hide {
-		display: none;
+		display: none !important;
 	}
 	.main-menu{
 	    position: relative !important;
