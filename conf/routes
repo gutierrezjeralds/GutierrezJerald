@@ -7,7 +7,7 @@ GET     /                                        Application.home
 GET     /About                                   Application.about
 GET     /Resume                                  Application.resume
 GET     /Portfolio                               Application.portfolio
-#GET     /Contact                                 Application.contact
+GET     /Contact                                 Application.contact
 
 #Maintenance
 #GET     /                                        Application.maintenance
