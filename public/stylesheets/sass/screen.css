@@ -343,3 +343,8 @@ h2 {
   border: none !important;
   display: inline-block !important;
 }
+
+/* line 89, ../../sass/sass/_common.scss */
+a {
+  cursor: pointer;
+}

@@ -1,6 +1,15 @@
 /* line 3, ../../sass/sass/portfolio.scss */
-.wrapper-portfolio .portfolio-body-content .content {
-  width: 175px;
-  height: 170px;
+.wrapper-portfolio .portfolio-body-content .content-list {
   border: 1px solid grey;
+  width: 175px;
+  height: 175px;
+  position: relative;
+}
+/* line 8, ../../sass/sass/portfolio.scss */
+.wrapper-portfolio .portfolio-body-content .content-list img {
+  position: absolute;
+  height: 100%;
+  max-width: 100%;
+  left: 0;
+  top: 0;
 }
