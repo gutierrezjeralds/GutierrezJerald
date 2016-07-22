@@ -1,11 +1,12 @@
 /* line 3, ../../sass/sass/portfolio.scss */
 .wrapper-portfolio .portfolio-body-content .content-list {
   border: 1px solid grey;
+  border-radius: 4px;
   width: 175px;
   height: 175px;
   position: relative;
 }
-/* line 8, ../../sass/sass/portfolio.scss */
+/* line 9, ../../sass/sass/portfolio.scss */
 .wrapper-portfolio .portfolio-body-content .content-list img {
   position: absolute;
   height: 100%;

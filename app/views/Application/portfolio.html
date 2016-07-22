@@ -13,6 +13,7 @@ website.controller('portfolioCtrl', function($scope) {
         {
             portfolioListTitle: "&{'portfolioListTitle_1'}",
             portfolioListHref: "",
+            portfolioListHrefID: "fade-in1-Href",
             portfolioDivID: "fade-in1",
             portfolioListImg1: "/public/images/background/background_1.jpg",
             portfolioListImg2: "/public/images/background/background_2.jpg",
@@ -21,6 +22,7 @@ website.controller('portfolioCtrl', function($scope) {
         {
             portfolioListTitle: "&{'portfolioListTitle_2'}",
             portfolioListHref: "",
+            portfolioListHrefID: "fade-in2-Href",
             portfolioDivID: "fade-in2",
             portfolioListImg2: "/public/images/background/background_2.jpg",
             portfolioListImg3: "/public/images/background/background_3.jpg",
@@ -29,6 +31,7 @@ website.controller('portfolioCtrl', function($scope) {
         {
             portfolioListTitle: "&{'portfolioListTitle_3'}",
             portfolioListHref: "",
+            portfolioListHrefID: "fade-in3-Href",
             portfolioDivID: "fade-in3",
             portfolioListImg3: "/public/images/background/background_3.jpg",
             portfolioListImg1: "/public/images/background/background_1.jpg",
@@ -37,6 +40,7 @@ website.controller('portfolioCtrl', function($scope) {
         {
             portfolioListTitle: "&{'portfolioListTitle_4'}",
             portfolioListHref: "",
+            portfolioListHrefID: "fade-in4-Href",
             portfolioDivID: "fade-in4",
             portfolioListImg3: "/public/images/background/background_3.jpg",
             portfolioListImg1: "/public/images/background/background_1.jpg",
@@ -45,6 +49,7 @@ website.controller('portfolioCtrl', function($scope) {
         {
             portfolioListTitle: "&{'portfolioListTitle_5'}",
             portfolioListHref: "",
+            portfolioListHrefID: "fade-in5-Href",
             portfolioDivID: "fade-in5",
             portfolioListImg2: "/public/images/background/background_2.jpg",
             portfolioListImg3: "/public/images/background/background_3.jpg",
@@ -53,6 +58,7 @@ website.controller('portfolioCtrl', function($scope) {
         {
             portfolioListTitle: "&{'portfolioListTitle_6'}",
             portfolioListHref: "",
+            portfolioListHrefID: "fade-in6-Href",
             portfolioDivID: "fade-in6",
             portfolioListImg1: "/public/images/background/background_1.jpg",
             portfolioListImg2: "/public/images/background/background_2.jpg",
@@ -79,7 +85,7 @@ website.controller('portfolioCtrl', function($scope) {
             <ul class="list-group portfolio-list col-sm-offset-1 col-md-offset-2 col-xs-offset-2">
                 <li class="list-group-item" ng-repeat="x in portfolioList">
                     <a ng-href="{{x.portfolioListHref}}">
-                        <div class="content-list {{x.portfolioDivID}}">
+                        <div class="content-list {{x.portfolioDivID}}" id="{{x.portfolioListHrefID}}">
                             <img ng-src="{{x.portfolioListImg1}}">
                             <img ng-src="{{x.portfolioListImg2}}">
                             <img ng-src="{{x.portfolioListImg3}}">
