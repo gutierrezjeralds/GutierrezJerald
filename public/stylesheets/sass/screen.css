@@ -320,23 +320,6 @@ input[type=text]:-moz-placeholder {
   /* Firefox 18- */
 }
 
-/* line 73, ../../sass/sass/_common.scss */
-p {
-  color: #000;
-  text-shadow: 1px 1px 1px #fff;
-}
-
-/* line 77, ../../sass/sass/_common.scss */
-span {
-  color: #000;
-  text-shadow: 1px 1px 1px #fff;
-}
-
-/* line 81, ../../sass/sass/_common.scss */
-h2 {
-  color: #000 !important;
-}
-
 /* line 84, ../../sass/sass/_common.scss */
 .list-group-item {
   background: none !important;

@@ -159,7 +159,7 @@ header .social-main-menu .social-menu-li .menu-item:hover span .menu-item-name {
   width: 100%;
   max-width: 920px;
   border-radius: 5px;
-  background: transparent;
+  background-image: url("/public/images/background/bgGreyDots.jpg");
   height: auto;
   padding: 10px;
   margin-left: 40px;
