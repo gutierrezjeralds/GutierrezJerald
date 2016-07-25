@@ -17,16 +17,10 @@
   margin-left: -40px;
 }
 /* line 20, ../../sass/sass/about.scss */
-.wrapper-about .about-content .about-footer .list-group-item {
-  background: none !important;
-  border: none !important;
-  display: inline-block !important;
-}
-/* line 24, ../../sass/sass/about.scss */
-.wrapper-about .about-content .about-footer .list-group-item .c100 {
+.wrapper-about .about-content .about-footer .c100 {
   background-color: transparent;
 }
-/* line 26, ../../sass/sass/about.scss */
-.wrapper-about .about-content .about-footer .list-group-item .c100:after {
+/* line 22, ../../sass/sass/about.scss */
+.wrapper-about .about-content .about-footer .c100:after {
   background-color: transparent;
 }

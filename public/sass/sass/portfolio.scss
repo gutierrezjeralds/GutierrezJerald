@@ -1,14 +1,18 @@
 .wrapper-portfolio{
     .portfolio-body-content{
-        .content{
-            width: 175px;
-            height: 170px;
+        .content-list{
             border: 1px solid grey;
-        }
-        .list-group-item{
-            background: none !important;
-            border: none !important;
-            display: inline-block !important;
+            border-radius: 4px;
+            width: 175px;
+            height: 175px;
+            position:relative;
+            img{
+                position:absolute;
+                height: 100%;
+                max-width: 100%;
+                left:0;
+                top:0;
+            }
         }
     }
 }

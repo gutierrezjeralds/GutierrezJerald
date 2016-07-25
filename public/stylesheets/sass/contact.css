@@ -14,3 +14,22 @@
 .wrapper-contact .contact-body form .input-submit a {
   margin-left: 10px;
 }
+/* line 17, ../../sass/sass/contact.scss */
+.wrapper-contact .contact-body form input[type=text]::-webkit-input-placeholder, .wrapper-contact .contact-body form textarea::-webkit-input-placeholder {
+  color: #000;
+}
+/* line 20, ../../sass/sass/contact.scss */
+.wrapper-contact .contact-body form input[type=text]::-moz-placeholder, .wrapper-contact .contact-body form textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000;
+}
+/* line 23, ../../sass/sass/contact.scss */
+.wrapper-contact .contact-body form input[type=text]:-ms-input-placeholder, .wrapper-contact .contact-body form textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #000;
+}
+/* line 26, ../../sass/sass/contact.scss */
+.wrapper-contact .contact-body form input[type=text]:-moz-placeholder, .wrapper-contact .contact-body form textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #000;
+}

@@ -8,7 +8,7 @@ body {
     font-family: "Malgun Gothic", Helvetica, Arial;
 }
 .body-bg{
-    background: url("/public/images/background/body-bg.jpg") no-repeat center center fixed;
+    background: url("/public/images/background/background_4.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -34,45 +34,11 @@ header{
     .main-menu{
         position: fixed;
         margin-top: 40px;
+        margin-left: -10px;
         z-index: 1;
         .main-menu-li{
-            margin-bottom: 5px;
-            .menu-item{
-                text-decoration: none;
-                padding: 10px;
-                border-radius: 3px;
-                &.menu-item-bg{
-                    background: #55BDC9;
-                }
-                span{
-                    img{
-                        position: relative !important;
-                        width: 20px;
-                        height: 20px;
-                    }
-                    .menu-item-name{
-                        padding-left: 8px;
-                        color: #000;
-                    }
-                }
-                &:hover{
-                    span{
-                        .menu-item-name{
-                            color: #fff;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .social-main-menu{
-        position: fixed;
-        margin-top: 40px;
-        z-index: 2;
-        .social-menu-li{
-            display: none;
+            margin-bottom: 10px;
             cursor: pointer;
-            margin-bottom: 5px;
             .menu-item{
                 text-decoration: none;
                 padding: 10px;
@@ -89,6 +55,86 @@ header{
                     .menu-item-name{
                         display: none;
                         padding-left: 8px;
+                        color: #000;
+                        text-shadow: none;
+                        &.aboutMenuNav{
+                            display: inline-block;
+                        }
+                        &.resumeMenuNav{
+                            display: inline-block;
+                        }
+                        &.portfolioMenuNav{
+                            display: inline-block;
+                        }
+                        &.contactMenuNav{
+                            display: inline-block;
+                        }
+                    }
+                }
+                &:hover{
+                    span{
+                        .menu-item-name{
+                            color: #fff;
+                            text-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .social-main-menu{
+        position: fixed;
+        margin-top: 40px;
+        z-index: 2;
+        margin-left: -10px;
+        .social-menu-li{
+            display: none;
+            cursor: pointer;
+            margin-bottom: 10px;
+            .menu-item{
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 3px;
+                &.menu-item-bg{
+                    background: #55BDC9;
+                }
+                &#socialFbHref:hover{
+                    #socialFbSpan{
+                        display: inline-block;
+                    }
+                }
+                &#socialSkypeHref:hover{
+                    #socialSkypeSpan{
+                        display: inline-block;
+                    }
+                }
+                &#socialInstaHref:hover{
+                    #socialInstaSpan{
+                        display: inline-block;
+                    }
+                }
+                &#socialTwitterHref:hover{
+                    #socialTwitterSpan{
+                        display: inline-block;
+                    }
+                }
+                span{
+                    img{
+                        position: relative !important;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .menu-item-name{
+                        display: none;
+                        padding-left: 8px;
+                    }
+                }
+                &:hover{
+                    span{
+                        .menu-item-name{
+                            color: #fff;
+                            text-shadow: none;
+                        }
                     }
                 }
             }
@@ -104,9 +150,6 @@ header{
     height: auto;
     padding: 10px;
     margin-left: 40px;
-    -webkit-box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.75);
     .mainContact{
         border-left: 1px solid grey;
         position: fixed;
@@ -149,9 +192,32 @@ header{
             top: 500px;
         }
     }
-    .home-font-color{
-        span{
-            color: #000 !important;
+}
+.modal{
+    &#contactModal{
+        .contact-input-text{
+            input[type=text]{
+                width: 48%;
+            }
+        }
+        .contact-text-area{
+            textarea{
+                resize: none;
+            }
+        }
+    }
+    .modal-content{
+        background-image: url("/public/images/background/bgGreyDots.jpg");
+        padding: 10px;
+        .modal-header{
+            border: none;
+            padding-bottom: 0px;
+        }
+        .modal-footer{
+            border: none;
+            a{
+                margin-left: 10px;
+            }
         }
     }
 }

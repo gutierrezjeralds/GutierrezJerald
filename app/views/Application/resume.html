@@ -54,40 +54,60 @@ website.controller('resumeCtrl', function($scope) {
 
     $scope.mySkillsList = [
         {
-            mySkills: "&{'skills_1'}",
+            mySkills: "&{'skillsHtml'}",
             mySkillsValue: "95",
-            mySkillsClass: "mySkillsProgress1",
         },
         {
-            mySkills: "&{'skills_2'}",
-            mySkillsValue: "90",
-            mySkillsClass: "mySkillsProgress2",
+            mySkills: "&{'skillsCss'}",
+            mySkillsValue: "95",
         },
         {
-            mySkills: "&{'skills_3'}",
+            mySkills: "&{'skillsJavascript'}",
             mySkillsValue: "95",
-            mySkillsClass: "mySkillsProgress3",
         },
         {
-            mySkills: "&{'skills_4'}",
+            mySkills: "&{'skillsJquery'}",
             mySkillsValue: "95",
-            mySkillsClass: "mySkillsProgress4",
         },
-        //{
-        //    mySkills: "&{'skills_5'}",
-        //    mySkillsValue: "95",
-        //    mySkillsClass: "mySkillsProgress5",
-        //},
-        //{
-        //    mySkills: "&{'skills_6'}",
-        //    mySkillsValue: "90",
-        //    mySkillsClass: "mySkillsProgress6",
-        //},
-        //{
-        //    mySkills: "&{'skills_7'}",
-        //    mySkillsValue: "90",
-        //    mySkillsClass: "mySkillsProgress7",
-        //},
+        {
+            mySkills: "&{'skillsBootstrap'}",
+            mySkillsValue: "95",
+        },
+        {
+            mySkills: "&{'skillsSass'}",
+            mySkillsValue: "95",
+        },
+        {
+            mySkills: "&{'skillsAngular'}",
+            mySkillsValue: "85",
+        },
+        {
+            mySkills: "&{'skillsPhp'}",
+            mySkillsValue: "80",
+        },
+    ];
+
+    $scope.myOtherSkillsList = [
+        {
+            myOtherSkills: "&{'otherSkills_1'}",
+            myOtherSkillsValue: "90",
+        },
+        {
+            myOtherSkills: "&{'otherSkills_2'}",
+            myOtherSkillsValue: "90",
+        },
+        {
+            myOtherSkills: "&{'otherSkills_3'}",
+            myOtherSkillsValue: "80",
+        },
+        {
+            myOtherSkills: "&{'otherSkills_4'}",
+            myOtherSkillsValue: "85",
+        },
+        {
+            myOtherSkills: "&{'otherSkills_5'}",
+            myOtherSkillsValue: "80",
+        },
     ];
 
     $scope.workExperience = [
@@ -239,19 +259,31 @@ $(document).ready(function(){
                 <img class="img-circle" src="/public/images/resume/skills-resume.svg">
                 <span>&{'skillsTitle'}</span>
             </h2>
+            <ul class="list-group">
+                <li class="list-group-item mySkillsList" ng-repeat="x in mySkillsList">
+                    <p class="text-center">{{x.mySkills}}</p>
+                    <div class="progress-container">
+                        <div class="progress progress-striped active">
+                            <div class="bar progress-bar progress-bar-success" data-percentage="{{x.mySkillsValue}}" data-toggle="tooltip" data-placement="bottom" title="{{x.mySkillsValue}}%" style="width:0%"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="push25"></div>
+        <div class="resume-content my-other-skills box-shadow">
+            <h2>
+                <img class="img-circle" src="/public/images/resume/skills-resume.svg">
+                <span>&{'otherSkillsTitle'}</span>
+            </h2>
             <table class="table table-condensed">
                 <tbody>
-                <tr ng-repeat="x in mySkillsList">
+                <tr ng-repeat="x in myOtherSkillsList">
                     <td>
-                        <p>{{x.mySkills}}</p>
-                        <!-- <div class="progress">
-                            <div class="progress-bar" data-toggle="tooltip" data-placement="bottom" title="{{x.mySkillsValue}}%" style="width:{{x.mySkillsValue}}%">
-                                <span class="sr-only">{{x.mySkillsValue}}%</span>
-                            </div>
-                        </div> -->
+                        <p>{{x.myOtherSkills}}</p>
                         <div class="progress-container">
                             <div class="progress progress-striped active">
-                                <div class="bar progress-bar progress-bar-success" data-percentage="{{x.mySkillsValue}}" data-toggle="tooltip" data-placement="bottom" title="{{x.mySkillsValue}}%" style="width:0%"></div>
+                                <div class="bar progress-bar progress-bar-success" data-percentage="{{x.myOtherSkillsValue}}" data-toggle="tooltip" data-placement="bottom" title="{{x.myOtherSkillsValue}}%" style="width:0%"></div>
                             </div>
                         </div>
                     </td>
@@ -282,7 +314,7 @@ $(document).ready(function(){
                 </tbody>
             </table>
         </div>
-        <div class="push25"></div>
+        <!--<div class="push25"></div>
         <div class="resume-content seminars box-shadow">
             <h2>
                 <img class="img-circle" src="/public/images/resume/seminar-resume.svg">
@@ -300,7 +332,7 @@ $(document).ready(function(){
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div>-->
     </div>
 </div>
 

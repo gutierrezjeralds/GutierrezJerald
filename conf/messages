@@ -47,6 +47,7 @@ yourEmail = Enter your Email Address
 yourMessage = Enter your Message
 yourName = Enter your Name
 contactAsk = Ask me anything...
+contactDownload = Are you sure you want to download my CV?
 
 #Home
 homeName = Gutierrez, Jerald S.
@@ -61,7 +62,7 @@ aboutSkills_3 = JavaScript
 aboutSkills_4 = Jquery
 
 #Portfolio
-portfolioTitle = My Portfolio...
+portfolioTitle = Some of my works...
 
 #Personal Information
 personalInfoTitle = Personal Information
@@ -76,7 +77,7 @@ personalInfoAddress_2 = Dalipit West, Alitagtag, Batangas
 personalInfoNationality_1 = Nationality
 personalInfoNationality_2 = Filipino
 personalInfoObjective_1 = Objective
-personalInfoObjective_2 = To apply in your company in the field of Information Technology/System and to gain experience that would utilize my knowledge and skills at the same time, to contribute to the achievement of the organizational goals and objectives.
+personalInfoObjective_2 = To apply in your company as a Web Developer and to gain experience that would utilize my knowledge and skills at the same time, to contribute to the achievement of the organizational goals and objectives.
 
 #Education Background
 educTitle = Educational Background
@@ -116,14 +117,23 @@ of the teachers, employees and school computers laboratory
 
 
 #My Skills
-skillsTitle = My Skills
-skills_1 = ☺ Knowledgeable in Web developing such as: HTML, CSS, SASS, Angular JS, Bootstrap, JavaScript, JQuery, PHP, HTML5, CSS3.
-skills_2 = ☺ Knowledgeable in Play Framework, Source Tree, IntelliJ Idea processing
-skills_3 = ☺ Knowledgeable in reformatting windows operating system platforms
-skills_4 = ☺ Knowledgeable in computer troubleshooting
-skills_5 = ☺ Knowledgeable in Microsoft Word, Excel and Power Point processing
-skills_6 = ☺ Knowledgeable in SAP Business One processing and installation
-skills_7 = ☺ Knowledgeable in database/MySQL and visual basic studio processing
+skillsTitle = My Web Developing Skills
+skillsHtml = HTML / HTML5
+skillsCss = CSS / CSS3
+skillsJavascript = JavaScript
+skillsJquery = JQuery
+skillsBootstrap = Bootstrap
+skillsSass = SASS
+skillsAngular = Angular JS
+skillsPhp = PHP
+
+#Other Skills
+otherSkillsTitle = My Other Skills
+otherSkills_1 = Knowledgeable in Play Framework, Source Tree, IntelliJ Idea processing
+otherSkills_2 = Knowledgeable in reformatting windows operating system platforms
+otherSkills_3 = Knowledgeable in computer troubleshooting
+otherSkills_4 = Knowledgeable in SAP Business One processing and installation
+otherSkills_5 = Knowledgeable in database/MySQL and visual basic studio processing
 
 #Seminars
 seminarTitle = Seminars Attended

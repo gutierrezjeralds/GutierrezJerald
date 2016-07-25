@@ -16,6 +16,7 @@
 
         <script type="text/javascript" src="/public/javascripts/angular.min.js"></script>
         <script type="text/javascript" src="/public/javascripts/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="/public/javascripts/jquery-ui-1.11.2.js"></script>
         <script src="/public/bootstrap/js/bootstrap.min.js"></script>
         <script src="/public/bootstrap/js/bootstrap-select.js"></script>
         <script>
@@ -52,7 +53,7 @@
                     },
                     {
                         mainNav: "&{'mainContact'}",
-                        mainNavUrl: "/Contact",
+                        mainNavUrl: "",
                         mainNavImg: "/public/images/menu/contact-menu.svg",
                         mainNavSpanID: "&{'mainContactSpanID'}",
                         mainNavHrefID: "&{'mainContactHrefID'}",
@@ -91,53 +92,56 @@
             });
         </script>
         <script type="text/javascript">
-            <!-- Disable ctrl key -->
-            function disableCtrlKeyCombination(e){
-                //list all CTRL + key combinations you want to disable
-                var forbiddenKeys = new Array('a', 'c' , 'w', 'u' , 's' , "false");
-                var key;
-                var isCtrl;
-                if(window.event){
-                    key = window.event.keyCode;     //IE
-                    if(window.event.ctrlKey)
-                        isCtrl = true;
-                        else
-                        isCtrl = false;
-                    }else{
-                        key = e.which;     //firefox
-                        if(e.ctrlKey)
-                            isCtrl = true;
-                            else
-                            isCtrl = false;
-                        }
-                        //if ctrl is pressed check if other key is in forbidenKeys array
-                        if(isCtrl){
-                            for(i=0; i<forbiddenKeys.length; i++)
-                        {
-                        //case-insensitive comparation
-                        if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()){
-                            return false;
-                        }
-                    }
-                }return true;
-            }
-            <!-- END -->
             $(document).ready(function(){
                 <!-- Disable ctrl shift key and right click -->
-                $(window).keydown(function(event){
-                    if(event.keyCode==123){
+                window.onkeydown = function(e) {
+                    if(event.keyCode == 123) {
                         return false;
                     }
-                    else if (event.ctrlKey && event.shiftKey && event.keyCode==73){
-                             return false;
+                    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                        return false;
                     }
-                });
+                    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+                        return false;
+                    }
+                    if(e.metaKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+                        return false;
+                    }
+                    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                        return false;
+                    }
+                    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                        return false;
+                    }
+                    if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)){
+                        return false;
+                    }
+                    if(e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)){
+                        return false;
+                    }
+                }
                 $(window).on("contextmenu",function(e){
                    return false;
                 });
                 <!-- END -->
 
                 $('[data-toggle="tooltip"]').tooltip();
+
+                $('#mainContactHref').click(function(){
+                    $('#contactModal').modal();
+                });
+                $('#downloadModal').click(function(){
+                    $('#downloadModalDisplay').modal();
+                });
+                $('#download-modal-no').click(function(){
+                    $('#contactModal').modal();
+                });
+                $('#contactModal').draggable({
+                    handle: ".modal-content"
+                });
+                $('#downloadModalDisplay').draggable({
+                    handle: ".modal-content"
+                });
 
                 var url = document.location.toString();
                 // Change hash for page-reload
@@ -147,40 +151,35 @@
                 var menuResume = url.substr(url.search("Resume"),10);
                 var menuPortfolio = url.substr(url.search("Portfolio"),10);
                 var menuContact = url.substr(url.search("Contact"),10);
+
                 if(menuAbout == ("About")){
-                    $('#mainHomeSpan').css("display","none");
-                    $('#mainResumeSpan').css("display","none");
-                    $('#mainPortfolioSpan').css("display","none");
-                    $('#mainContactSpan').css("display","none");
+                    $('#mainAboutSpan').addClass("aboutMenuNav");
                     $('#mainAboutHref').tooltip('disable');
-                    $('#footer').addClass("aboutFooter");
                     $('#mainAboutHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
+                    $('#footer').addClass("aboutFooter");
                 }
                 else if(menuResume == ("Resume")){
-                    $('#mainAboutSpan').css("display","none");
-                    $('#mainHomeSpan').css("display","none");
-                    $('#mainPortfolioSpan').css("display","none");
-                    $('#mainContactSpan').css("display","none");
-                    $('#mainResumeHref').tooltip('disable');
+                    $('#mainResumeSpan').addClass("resumeMenuNav");
                     $('#mainResumeHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
+                    $('#mainResumeHref').tooltip('disable');
                 }
                 else if(menuPortfolio == ("Portfolio")){
-                    $('#mainAboutSpan').css("display","none");
-                    $('#mainHomeSpan').css("display","none");
-                    $('#mainResumeSpan').css("display","none");
-                    $('#mainContactSpan').css("display","none");
+                    $('#mainPortfolioSpan').addClass("portfolioMenuNav");
                     $('#mainPortfolioHref').tooltip('disable');
-                    $('#footer').addClass("portfolioFooter");
                     $('#mainPortfolioHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
+                    $('#footer').addClass("portfolioFooter");
                 }
                 else if(menuContact == ("Contact")){
-                    $('#mainAboutSpan').css("display","none");
-                    $('#mainHomeSpan').css("display","none");
-                    $('#mainResumeSpan').css("display","none");
-                    $('#mainPortfolioSpan').css("display","none");
+                    $('#mainContactSpan').addClass("contactMenuNav");
                     $('#mainContactHref').tooltip('disable');
-                    $('#footer').addClass("contactFooter");
                     $('#mainContactHref').addClass("menu-item-grad-bg").removeClass("menu-item-bg");
+                    $('#footer').addClass("contactFooter");
+                    $('#contactModal').on('show.bs.modal', function (e) {
+                        var button = e.relatedTarget;
+                            if($(a).hasID('mainContactHref')) {
+                            e.stopPropagation();
+                        }
+                    });
                 }
                 else{
                     $('.main-menu-li').css("display","none");
@@ -188,27 +187,8 @@
                     $('.social-menu-li').css("display","block");
                     $('body').addClass("slideshow");
                     $('.wrapper-main').css("background-image","url('/public/images/background/bgGreyDots.jpg')");
-                    $('#socialFbHref').mouseover(function() {
-                        $('#socialFbSpan').css("display","inline-block");
-                    });
-                    $('#socialSkypeHref').mouseover(function() {
-                        $('#socialSkypeSpan').css("display","inline-block");
-                    });
-                    $('#socialInstaHref').mouseover(function() {
-                        $('#socialInstaSpan').css("display","inline-block");
-                    });
-                    $('#socialTwitterHref').mouseover(function() {
-                        $('#socialTwitterSpan').css("display","inline-block");
-                    });
-                    $('#socialFbHref,#socialSkypeHref,#socialInstaHref,#socialTwitterHref').mouseout(function() {
-                        $('#socialFbSpan').css("display","none");
-                        $('#socialSkypeSpan').css("display","none");
-                        $('#socialInstaSpan').css("display","none");
-                        $('#socialTwitterSpan').css("display","none");
-                    });
                     $('body').removeClass("body-bg");
                     $('#footer').addClass("homeFooter");
-                    $('#mainContactBody').addClass("home-font-color");
                 }
                 //End of script
 
@@ -245,13 +225,13 @@
         </script>
         #{get 'moreScripts' /}
     </head>
-    <body class="body-bg" onkeypress="return disableCtrlKeyCombination(event);" onkeydown="return disableCtrlKeyCombination(event);" ng-app="website" ng-controller="dataCtrl">
+    <body class="body-bg" ng-app="website" ng-controller="dataCtrl">
         <div class="push25"></div>
         <div class="wrapper page960">
             <header>
                 <ul class="main-menu">
                     <li ng-repeat="x in mainMenu" class="main-menu-li" id="li-{{x.mainNavSpanID}}">
-                        <a ng-href="{{x.mainNavUrl}}" class="menu-item menu-item-bg hvr-bounce-to-right" id="{{x.mainNavHrefID}}" data-toggle="tooltip" data-placement="right" title="{{x.mainNav}}">
+                        <a ng-href="{{x.mainNavUrl}}" class="menu-item menu-item-bg hvr-bounce-to-right box-shadow" id="{{x.mainNavHrefID}}" data-toggle="tooltip" data-placement="right" title="{{x.mainNav}}">
                             <span>
                                 <img ng-src="{{x.mainNavImg}}" />
                                 <span class="menu-item-name sm-hide" id="{{x.mainNavSpanID}}">{{x.mainNav}}</span>
@@ -262,7 +242,7 @@
                 <!-- Home Page Nav Menu -->
                 <ul class="social-main-menu">
                     <li ng-repeat="x in socialMenu" class="social-menu-li">
-                        <a ng-href="{{x.socialNavUrl}}" class="menu-item menu-item-bg hvr-bounce-to-right" id="{{x.socialNavHrefID}}">
+                        <a ng-href="{{x.socialNavUrl}}" class="menu-item menu-item-bg hvr-bounce-to-right box-shadow" id="{{x.socialNavHrefID}}" target="_blank">
                             <span>
                                 <img ng-src="{{x.socialNavImg}}" />
                                 <span class="menu-item-name sm-hide" id="{{x.socialNavSpanID}}">{{x.socialNav}}</span>
@@ -273,7 +253,7 @@
                 <!-- END -->
             </header>
 
-            <div class="wrapper-main">
+            <div class="wrapper-main box-shadow">
                 <div class="cointaner">
                     <div class="row">
                         <div class="col-md-9">
@@ -288,8 +268,8 @@
                                 </div>
                                 <div class="mainSocialIcon">
                                     <span ng-repeat="x in socialMenu">
-                                        <a href="{{x.socialNavUrl}}">
-                                            <img ng-src="{{x.socialNavImg}}" data-toggle="tooltip" data-placement="bottom" title="{{x.socialNav}}" />
+                                        <a href="{{x.socialNavUrl}}" target="_blank">
+                                            <img ng-src="{{x.socialNavImg}}" class="box-shadow" data-toggle="tooltip" data-placement="bottom" title="{{x.socialNav}}" />
                                         </a>
                                     </span>
                                 </div>
@@ -306,5 +286,57 @@
             </div>
         </div>
         <div class="push25"></div>
+        <!-- Contact Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="contact-title box-shadow col-md-12">
+                            <h2>
+                                &{'contactAsk'}
+                            </h2>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="push25"></div>
+                        <form class="form-group box-shadow col-md-12">
+                            <div class="push25"></div>
+                            <div class="contact-input-text">
+                                <input type="text" class="form-control col-md-6 pull-left" placeholder="&{'yourEmail'}"/>
+                                <input type="text" class="form-control col-md-6 pull-right" placeholder="&{'yourName'}"/>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="push25"></div>
+                            <div class="contact-text-area">
+                                <textarea class="form-control" rows="10" placeholder="&{'yourMessage'}"></textarea>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="push25"></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="btn btn-primary hvr-shutter-out-horizontal pull-right">Send</a>
+                        <a href="" class="btn btn-default hvr-shutter-in-horizontal pull-right" id="downloadModal" data-dismiss="modal">Download My CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
+        <!-- Download Modal -->
+        <div class="modal fade" id="downloadModalDisplay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3>
+                            &{'contactDownload'}
+                        </h3>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="btn btn-default hvr-shutter-in-horizontal pull-right" id="download-modal-no" data-dismiss="modal">No</a>
+                        <a download="Resume-Jerald-Update.pdf" href="public/resume-file/Resume-Jerald-Update.pdf" class="btn btn-primary hvr-shutter-out-horizontal pull-right" onclick="location.reload()">Yes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
     </body>
 </html>

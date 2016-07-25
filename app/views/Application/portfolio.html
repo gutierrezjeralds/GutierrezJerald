@@ -6,45 +6,65 @@
 #{/}
 
 #{get 'moreScripts'}
+<script type="text/javascript" src="/public/javascripts/portfolioList.js"></script>
 <script>
 website.controller('portfolioCtrl', function($scope) {
     $scope.portfolioList = [
         {
             portfolioListTitle: "&{'portfolioListTitle_1'}",
-            portfolioListHrefID: "",
-            portfolioListImg: "",
+            portfolioListHref: "",
+            portfolioListHrefID: "fade-in1-Href",
+            portfolioDivID: "fade-in1",
+            portfolioListImg1: "/public/images/background/background_1.jpg",
+            portfolioListImg2: "/public/images/background/background_2.jpg",
+            portfolioListImg3: "/public/images/background/background_3.jpg",
         },
         {
-            portfolioListTitle: "&{'portfolioListTitle_1'}",
-            portfolioListHrefID: "",
-            portfolioListImg: "",
+            portfolioListTitle: "&{'portfolioListTitle_2'}",
+            portfolioListHref: "",
+            portfolioListHrefID: "fade-in2-Href",
+            portfolioDivID: "fade-in2",
+            portfolioListImg2: "/public/images/background/background_2.jpg",
+            portfolioListImg3: "/public/images/background/background_3.jpg",
+            portfolioListImg1: "/public/images/background/background_1.jpg",
         },
         {
-            portfolioListTitle: "&{'portfolioListTitle_1'}",
-            portfolioListHrefID: "",
-            portfolioListImg: "",
+            portfolioListTitle: "&{'portfolioListTitle_3'}",
+            portfolioListHref: "",
+            portfolioListHrefID: "fade-in3-Href",
+            portfolioDivID: "fade-in3",
+            portfolioListImg3: "/public/images/background/background_3.jpg",
+            portfolioListImg1: "/public/images/background/background_1.jpg",
+            portfolioListImg2: "/public/images/background/background_2.jpg",
         },
         {
-            portfolioListTitle: "&{'portfolioListTitle_1'}",
-            portfolioListHrefID: "",
-            portfolioListImg: "",
+            portfolioListTitle: "&{'portfolioListTitle_4'}",
+            portfolioListHref: "",
+            portfolioListHrefID: "fade-in4-Href",
+            portfolioDivID: "fade-in4",
+            portfolioListImg3: "/public/images/background/background_3.jpg",
+            portfolioListImg1: "/public/images/background/background_1.jpg",
+            portfolioListImg2: "/public/images/background/background_2.jpg",
         },
         {
-            portfolioListTitle: "&{'portfolioListTitle_1'}",
-            portfolioListHrefID: "",
-            portfolioListImg: "",
+            portfolioListTitle: "&{'portfolioListTitle_5'}",
+            portfolioListHref: "",
+            portfolioListHrefID: "fade-in5-Href",
+            portfolioDivID: "fade-in5",
+            portfolioListImg2: "/public/images/background/background_2.jpg",
+            portfolioListImg3: "/public/images/background/background_3.jpg",
+            portfolioListImg1: "/public/images/background/background_1.jpg",
         },
         {
-            portfolioListTitle: "&{'portfolioListTitle_1'}",
-            portfolioListHrefID: "",
-            portfolioListImg: "",
+            portfolioListTitle: "&{'portfolioListTitle_6'}",
+            portfolioListHref: "",
+            portfolioListHrefID: "fade-in6-Href",
+            portfolioDivID: "fade-in6",
+            portfolioListImg1: "/public/images/background/background_1.jpg",
+            portfolioListImg2: "/public/images/background/background_2.jpg",
+            portfolioListImg3: "/public/images/background/background_3.jpg",
         },
     ];
-});
-</script>
-<script>
-$(document).ready(function(){
-    $(".progress-bar").loading();
 });
 </script>
 #{/}
@@ -64,11 +84,13 @@ $(document).ready(function(){
             <div class="push25"></div>
             <ul class="list-group portfolio-list col-sm-offset-1 col-md-offset-2 col-xs-offset-2">
                 <li class="list-group-item" ng-repeat="x in portfolioList">
-                    <div class="content">
-                        <a href="">
-                            <img ng-src="" />
-                        </a>
-                    </div>
+                    <a ng-href="{{x.portfolioListHref}}">
+                        <div class="content-list {{x.portfolioDivID}}" id="{{x.portfolioListHrefID}}">
+                            <img ng-src="{{x.portfolioListImg1}}">
+                            <img ng-src="{{x.portfolioListImg2}}">
+                            <img ng-src="{{x.portfolioListImg3}}">
+                        </div>
+                    </a>
                 </li>
             </ul>
         </div>
